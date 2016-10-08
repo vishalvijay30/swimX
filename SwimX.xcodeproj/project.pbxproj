@@ -21,6 +21,14 @@
 		2B5DACEA1DA89F9500B42C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DACE91DA89F9500B42C6A /* Assets.xcassets */; };
 		2BDB48DF1DA974DE000A230C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDB48DE1DA974DE000A230C /* HealthKit.framework */; };
 		2BDB48E31DA974E6000A230C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDB48E21DA974E6000A230C /* HealthKit.framework */; };
+		2BDB48E51DA989F0000A230C /* SwimTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48E41DA989F0000A230C /* SwimTypeController.swift */; };
+		2BDB48E71DA98A07000A230C /* DiveConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48E61DA98A07000A230C /* DiveConfirmController.swift */; };
+		2BDB48E91DA98A2C000A230C /* OlympicTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48E81DA98A2C000A230C /* OlympicTypeController.swift */; };
+		2BDB48EB1DA98A3E000A230C /* CustomTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48EA1DA98A3E000A230C /* CustomTypeController.swift */; };
+		2BDB48ED1DA98A5B000A230C /* DiveStatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48EC1DA98A5B000A230C /* DiveStatsController.swift */; };
+		2BDB48EF1DA98A73000A230C /* StatsOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48EE1DA98A73000A230C /* StatsOneController.swift */; };
+		2BDB48F11DA98A84000A230C /* StatsTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F01DA98A84000A230C /* StatsTwoController.swift */; };
+		2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F21DA98A96000A230C /* StatsThreeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +94,14 @@
 		2BDB48E01DA974DF000A230C /* SwimX WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwimX WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		2BDB48E11DA974E5000A230C /* SwimX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwimX.entitlements; sourceTree = "<group>"; };
 		2BDB48E21DA974E6000A230C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		2BDB48E41DA989F0000A230C /* SwimTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwimTypeController.swift; sourceTree = "<group>"; };
+		2BDB48E61DA98A07000A230C /* DiveConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiveConfirmController.swift; sourceTree = "<group>"; };
+		2BDB48E81DA98A2C000A230C /* OlympicTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlympicTypeController.swift; sourceTree = "<group>"; };
+		2BDB48EA1DA98A3E000A230C /* CustomTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTypeController.swift; sourceTree = "<group>"; };
+		2BDB48EC1DA98A5B000A230C /* DiveStatsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiveStatsController.swift; sourceTree = "<group>"; };
+		2BDB48EE1DA98A73000A230C /* StatsOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsOneController.swift; sourceTree = "<group>"; };
+		2BDB48F01DA98A84000A230C /* StatsTwoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTwoController.swift; sourceTree = "<group>"; };
+		2BDB48F21DA98A96000A230C /* StatsThreeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsThreeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +177,14 @@
 				2B5DACE71DA89F9500B42C6A /* ExtensionDelegate.swift */,
 				2B5DACE91DA89F9500B42C6A /* Assets.xcassets */,
 				2B5DACEB1DA89F9500B42C6A /* Info.plist */,
+				2BDB48E41DA989F0000A230C /* SwimTypeController.swift */,
+				2BDB48E61DA98A07000A230C /* DiveConfirmController.swift */,
+				2BDB48E81DA98A2C000A230C /* OlympicTypeController.swift */,
+				2BDB48EA1DA98A3E000A230C /* CustomTypeController.swift */,
+				2BDB48EC1DA98A5B000A230C /* DiveStatsController.swift */,
+				2BDB48EE1DA98A73000A230C /* StatsOneController.swift */,
+				2BDB48F01DA98A84000A230C /* StatsTwoController.swift */,
+				2BDB48F21DA98A96000A230C /* StatsThreeController.swift */,
 			);
 			path = "SwimX WatchKit Extension";
 			sourceTree = "<group>";
@@ -330,8 +354,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDB48EF1DA98A73000A230C /* StatsOneController.swift in Sources */,
+				2BDB48EB1DA98A3E000A230C /* CustomTypeController.swift in Sources */,
+				2BDB48E71DA98A07000A230C /* DiveConfirmController.swift in Sources */,
+				2BDB48E91DA98A2C000A230C /* OlympicTypeController.swift in Sources */,
+				2BDB48F11DA98A84000A230C /* StatsTwoController.swift in Sources */,
+				2BDB48E51DA989F0000A230C /* SwimTypeController.swift in Sources */,
+				2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */,
 				2B5DACE81DA89F9500B42C6A /* ExtensionDelegate.swift in Sources */,
 				2B5DACE61DA89F9500B42C6A /* InterfaceController.swift in Sources */,
+				2BDB48ED1DA98A5B000A230C /* DiveStatsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
