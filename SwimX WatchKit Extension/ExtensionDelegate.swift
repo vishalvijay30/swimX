@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import CoreLocation
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
