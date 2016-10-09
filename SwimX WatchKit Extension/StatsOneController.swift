@@ -77,7 +77,6 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
             healthStore.end(workout)
         }
         locManager.stopUpdatingLocation()
-        
         WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
     }
     

@@ -32,10 +32,15 @@ class StatsTwoController: WKInterfaceController {
         
         flipTurnTimeButton.setText("\(flipTurnTime)")
         
-        motionManager.accelerometerUpdateInterval = 0.1
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkAccelerationCondition), userInfo: nil, repeats: true) // TODO: invalidate it
+        // Configure interface objects here.
+    }
+    
+    func checkAccelerationCondition() {
+
         if (fabs(statsOneController.getCurrentDistance()-length)<=5.0) {
             //starting updates on current queue for now; not recommended in the future
-            
+            motionManager.accelerometerUpdateInterval = 0.1
             motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
                 self.startTimer(acceleration: accelerometerData!.acceleration)
                 
@@ -44,7 +49,6 @@ class StatsTwoController: WKInterfaceController {
                 }
             })
         }
-        // Configure interface objects here.
     }
     
     func startTimer(acceleration: CMAcceleration) {
