@@ -21,8 +21,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        //set the current number of laps
-        lapsButtonLabel.setTitle("\(numLaps)")
+        
         
         
         //Configure locationManager and set up delegate
@@ -91,6 +90,9 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        //set the current number of laps
+        lapsButtonLabel.setTitle("\(numLaps)")
     }
 
     override func didDeactivate() {

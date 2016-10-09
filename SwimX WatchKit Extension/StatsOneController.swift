@@ -41,10 +41,6 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        //consider moving to willActivate() method since only needed there
-        //set current speed
-        speedLabel.setText("\(currentSpeed)")
-        distanceLabel.setText("\(currentDistance)")
         
         //set up location manager and delegate
         locManager.delegate = self
@@ -130,7 +126,8 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
+        speedLabel.setText("\(currentSpeed)")
+        distanceLabel.setText("\(currentDistance)")
         guard HKHealthStore.isHealthDataAvailable() == true else {
             print("not available")
             return
