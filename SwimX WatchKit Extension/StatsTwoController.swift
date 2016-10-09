@@ -37,7 +37,6 @@ class StatsTwoController: WKInterfaceController {
             //starting updates on current queue for now; not recommended in the future
             
             motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
-                
                 self.startTimer(acceleration: accelerometerData!.acceleration)
                 
                 if(NSError != nil) {
@@ -61,10 +60,10 @@ class StatsTwoController: WKInterfaceController {
                 
                 //start timer
                 
-                timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(StatsTwoController.updateTime), userInfo: nil, repeats: true)
+                //timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(StatsTwoController.updateTime), userInfo: nil, repeats: true)
+                self.updateTime()
                 
             } else { //need help with invalidate condition
-                timer.invalidate()
                 motionManager.stopAccelerometerUpdates()
                 flipTurnTimeArr.append(flipTurnTime)
                 flipTurnTime = 0.0
@@ -73,6 +72,8 @@ class StatsTwoController: WKInterfaceController {
             
             previousAcceleration = acceleration
         }
+        
+        previousAcceleration = acceleration
         
     }
     
@@ -85,7 +86,7 @@ class StatsTwoController: WKInterfaceController {
         for i in flipTurnTimeArr {
             total += i
         }
-        return total/(Double(flipTurnTimeArr.count))
+        return total/(Double(getAverageFlipTurnTime()))
     }
     
     func updateTime() -> Void {
