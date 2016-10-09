@@ -167,6 +167,7 @@
                         <label width="136" height="35" alignment="left" text="Stroke Rate" textAlignment="center" id="sH3-Qs-9hh"/>
                     </items>
                     <connections>
+                        <outlet property="flipTurnTime" destination="a8n-5I-kO9" id="AOP-YK-Gox"/>
                         <segue destination="QsN-iI-SO7" kind="relationship" relationship="nextPage" id="I9Z-63-0no"/>
                     </connections>
                 </controller>

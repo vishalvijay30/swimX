@@ -31,7 +31,7 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
         locManager.delegate = self
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.startUpdatingLocation()
-        locPrevious = locManager.location!
+        //locPrevious = locManager.location!
         
         //currentSpeed = locManager.location!.speed
         //currentDistance = locManager.location!.distance(from: locManager.location!)
@@ -79,9 +79,13 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
     }
     
     func updateDistance(location:CLLocation) -> Void {
-        currentDistance += location.distance(from: locPrevious!)
-        distanceLabel.setText("\(currentDistance)")
-        locPrevious = location
+        if locPrevious != nil {
+            currentDistance += location.distance(from: locPrevious!)
+            distanceLabel.setText("\(currentDistance)")
+            locPrevious = location
+        } else {
+            locPrevious = location
+        }
     }
     
     func getCurrentSpeed() -> Double {

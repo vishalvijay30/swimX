@@ -31,8 +31,8 @@
 		2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F21DA98A96000A230C /* StatsThreeController.swift */; };
 		C91EE6E81DA99694009C7B7F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6E71DA99694009C7B7F /* CoreMotion.framework */; };
 		C91EE6EA1DA996A5009C7B7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6E91DA996A5009C7B7F /* CoreLocation.framework */; };
-		C91EE6EC1DA9970E009C7B7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */; };
-		C91EE6EE1DA99714009C7B7F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */; };
+		C91EE6EF1DA9F1B9009C7B7F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */; };
+		C91EE6F01DA9F1BD009C7B7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +127,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C91EE6EE1DA99714009C7B7F /* CoreMotion.framework in Frameworks */,
-				C91EE6EC1DA9970E009C7B7F /* CoreLocation.framework in Frameworks */,
+				C91EE6F01DA9F1BD009C7B7F /* CoreLocation.framework in Frameworks */,
+				C91EE6EF1DA9F1B9009C7B7F /* CoreMotion.framework in Frameworks */,
 				2BDB48DF1DA974DE000A230C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
