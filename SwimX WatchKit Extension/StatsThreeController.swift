@@ -16,26 +16,23 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
     var locManager = CLLocationManager()
     var numLaps: Int = 0
     var initialDirection:Double = 0.0
-    @IBOutlet var lapsButtonLabel: WKInterfaceButton!
+
+    @IBOutlet var lapsButtonLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        
-        
-        
         //Configure locationManager and set up delegate
+        /*
         locManager.delegate = self
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
         initialDirection = locManager.location!.course //doubtful; think about better way
-        
-        
+        */
     }
     
     //If authorization status changes
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
         
         switch status {
         case .notDetermined:
@@ -52,10 +49,10 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
             
         case .denied:
             locManager.stopUpdatingLocation()
-            lapsButtonLabel.setTitle("Location Permission not granted!")
+            lapsButtonLabel.setText("Location Permission not granted!")
             
         default:
-            lapsButtonLabel.setTitle("Permission not granted!")
+            lapsButtonLabel.setText("Permission not granted!")
             
         }
         
@@ -79,7 +76,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
             fabs(location.course-90-initialDirection)<=10) {
             
             numLaps+=1
-            lapsButtonLabel.setTitle("\(numLaps)")
+            lapsButtonLabel.setText("\(numLaps)")
         }
     }
     
@@ -90,9 +87,12 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
+        locManager.delegate = self
+        locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
+     //   initialDirection = locManager.location!.course //doubtful; think about better way
         //set the current number of laps
-        lapsButtonLabel.setTitle("\(numLaps)")
+        lapsButtonLabel.setText("\(numLaps)")
     }
 
     override func didDeactivate() {

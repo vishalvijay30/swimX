@@ -13,7 +13,8 @@ import CoreMotion
 
 class StatsTwoController: WKInterfaceController {
     
-    @IBOutlet var flipTurnTimeButton: WKInterfaceButton!
+
+    @IBOutlet var flipTurnTimeButton: WKInterfaceLabel!
     var motionManager = CMMotionManager()
     var statsOneController = StatsOneController()
     var previousAcceleration: CMAcceleration? = nil
@@ -29,7 +30,7 @@ class StatsTwoController: WKInterfaceController {
         
         //display the current flip turn time
         
-        flipTurnTimeButton.setTitle("\(flipTurnTime)")
+        flipTurnTimeButton.setText("\(flipTurnTime)")
         
         motionManager.accelerometerUpdateInterval = 0.1
         if (fabs(statsOneController.getCurrentDistance()-length)<=5.0) {
@@ -90,7 +91,7 @@ class StatsTwoController: WKInterfaceController {
         //shows instantaneous or last flip turn time while active
         //we must show average when session ends
         flipTurnTime += 0.1
-        flipTurnTimeButton.setTitle("\(flipTurnTime)")
+        flipTurnTimeButton.setText("\(flipTurnTime)")
     }
     
     override func willActivate() {

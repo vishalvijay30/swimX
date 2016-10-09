@@ -44,6 +44,26 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         
         //set up location manager and delegate
         locManager.delegate = self
+        
+        // core location authorization
+        
+        let authorizationStatus = CLLocationManager.authorizationStatus()
+        
+        switch authorizationStatus {
+        case .notDetermined:
+            locManager.requestWhenInUseAuthorization()
+            
+        case .authorizedWhenInUse:
+            locManager.requestLocation()
+            
+        case .denied:
+            print("denied")
+            
+        default:
+            print("unexpectedText")
+        }
+        
+        
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.startUpdatingLocation()        
     }
@@ -126,6 +146,27 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        // core location authorization 
+        
+        let authorizationStatus = CLLocationManager.authorizationStatus()
+        
+        switch authorizationStatus {
+        case .notDetermined:
+            locManager.requestWhenInUseAuthorization()
+            
+        case .authorizedWhenInUse:
+            locManager.requestLocation()
+            
+        case .denied:
+            print("denied")
+            
+        default:
+            print("unexpectedText")
+        }
+
+        
+        
         speedLabel.setText("\(currentSpeed)")
         distanceLabel.setText("\(currentDistance)")
         guard HKHealthStore.isHealthDataAvailable() == true else {
