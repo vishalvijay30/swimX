@@ -94,39 +94,6 @@
             </objects>
             <point key="canvasLocation" x="-506" y="490"/>
         </scene>
-        <!--Open Swim Stats-->
-        <scene sceneID="QaU-bh-kfZ">
-            <objects>
-                <controller identifier="openSwim" title="Open Swim Stats" id="0Tg-hd-Ef0" customClass="OpenSwimController" customModule="SwimX_WatchKit_Extension">
-                    <items>
-                        <timer width="136" height="35" alignment="left" id="bZp-4I-jtx"/>
-                        <separator alignment="left" id="3SW-NO-n8Y"/>
-                        <group width="1" height="42" alignment="left" id="mmA-JF-IrD">
-                            <items>
-                                <label width="62" height="20" alignment="left" text="-- m" textAlignment="center" id="iz5-Me-mIE"/>
-                                <label width="60" alignment="left" text="-- m/s" textAlignment="center" id="909-v6-DGK"/>
-                            </items>
-                        </group>
-                        <group width="1" height="42" alignment="left" id="Hq4-OR-SWg">
-                            <items>
-                                <label width="62" height="20" alignment="left" text="-- cals" textAlignment="center" id="qsM-DY-NeR"/>
-                                <label width="60" alignment="left" text="-- bpm" textAlignment="center" id="vju-a7-G5c"/>
-                            </items>
-                        </group>
-                    </items>
-                    <menu key="menu" id="sc7-xJ-9Yv">
-                        <items>
-                            <menuItem title="Menu Item" icon="accept" id="rxd-Ps-XQG">
-                                <connections>
-                                    <action selector="exit" destination="0Tg-hd-Ef0" id="bSx-1p-3Nw"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-203" y="881"/>
-        </scene>
         <!--Dive Stats-->
         <scene sceneID="Vpe-2z-4MB">
             <objects>
@@ -171,7 +138,15 @@
                         <group width="1" height="42" alignment="left" id="tLX-sV-YtI">
                             <items>
                                 <label width="62" height="20" alignment="left" text="-- cals" textAlignment="center" id="weq-c4-u2C"/>
-                                <label width="60" alignment="left" text="-- bpm" textAlignment="center" id="kqM-19-jVm"/>
+                                <group width="0.5" alignment="left" id="u0W-bp-K7z">
+                                    <items>
+                                        <label alignment="right" text="BPM" id="pnr-l4-UTQ">
+                                            <color key="textColor" red="0.86132884030000001" green="0.058584794400000001" blue="0.11313973369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <label width="34" alignment="left" text="---" textAlignment="right" id="kqM-19-jVm"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
@@ -191,7 +166,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-1136" y="881"/>
+            <point key="canvasLocation" x="-1273" y="881"/>
         </scene>
         <!--Swim Stats - 2-->
         <scene sceneID="5Rc-pD-rPV">
@@ -202,12 +177,9 @@
                         <label width="136" height="38" alignment="left" text="flip turn" textAlignment="center" id="hgp-PD-d50"/>
                         <label width="136" height="35" alignment="left" text="Stroke Rate" textAlignment="center" id="sH3-Qs-9hh"/>
                     </items>
-                    <connections>
-                        <segue destination="QsN-iI-SO7" kind="relationship" relationship="nextPage" id="I9Z-63-0no"/>
-                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-819" y="881"/>
+            <point key="canvasLocation" x="-1024" y="881"/>
         </scene>
         <!--Swim Stats - 3-->
         <scene sceneID="hXZ-R1-TcA">
@@ -219,7 +191,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-506" y="881"/>
+            <point key="canvasLocation" x="-777" y="881"/>
         </scene>
         <!--OlympicSwimType-->
         <scene sceneID="uSW-iH-tvV">

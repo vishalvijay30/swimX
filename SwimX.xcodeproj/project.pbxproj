@@ -201,7 +201,6 @@
 				2BDB48EE1DA98A73000A230C /* StatsOneController.swift */,
 				2BDB48F01DA98A84000A230C /* StatsTwoController.swift */,
 				2BDB48F21DA98A96000A230C /* StatsThreeController.swift */,
-				2BDB48F41DA9D67B000A230C /* OpenSwimController.swift */,
 			);
 			path = "SwimX WatchKit Extension";
 			sourceTree = "<group>";
@@ -385,7 +384,6 @@
 				2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */,
 				2B5DACE81DA89F9500B42C6A /* ExtensionDelegate.swift in Sources */,
 				2B5DACE61DA89F9500B42C6A /* InterfaceController.swift in Sources */,
-				2BDB48F51DA9D67B000A230C /* OpenSwimController.swift in Sources */,
 				2BDB48ED1DA98A5B000A230C /* DiveStatsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
