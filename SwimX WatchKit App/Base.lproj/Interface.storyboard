@@ -63,6 +63,11 @@
                                 <action selector="openSwim" destination="WB7-z4-zds" id="lrE-ga-JZe"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Button" id="pwC-Rh-iT1">
+                            <connections>
+                                <segue destination="vZ3-Hz-GeA" kind="push" id="eqy-ay-hhr"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="customSwim" destination="NWS-vf-2JP" id="W1t-KL-Aml"/>
@@ -70,6 +75,19 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="-819" y="50"/>
+        </scene>
+        <!--Stroke Tester Interface Controller-->
+        <scene sceneID="1iO-wW-t98">
+            <objects>
+                <controller id="vZ3-Hz-GeA" customClass="strokeTesterInterfaceController" customModule="SwimX_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="47" alignment="left" text="meters / stroke" textAlignment="center" id="en9-jl-IhJ"/>
+                        <label width="136" height="47" alignment="left" text="Stroke Rate" textAlignment="center" id="B0t-gh-8B4"/>
+                        <label width="136" height="49" alignment="left" text="sc/lap" textAlignment="center" id="sLy-cc-hts"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-313" y="44"/>
         </scene>
         <!--CustomPoolSize-->
         <scene sceneID="9um-V7-U3T">

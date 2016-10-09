@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B1740641DAAD9D500196913 /* mapstogpx20161009_195905.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2B1740631DAAD9D500196913 /* mapstogpx20161009_195905.gpx */; };
+		2B1740661DAADF6400196913 /* strokeTesterInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1740651DAADF6400196913 /* strokeTesterInterfaceController.swift */; };
 		2B5DACC31DA89F9400B42C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DACC21DA89F9400B42C6A /* AppDelegate.swift */; };
 		2B5DACC51DA89F9400B42C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DACC41DA89F9400B42C6A /* ViewController.swift */; };
 		2B5DACC81DA89F9400B42C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DACC61DA89F9400B42C6A /* Main.storyboard */; };
@@ -79,7 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B1740631DAAD9D500196913 /* mapstogpx20161009_195905.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = mapstogpx20161009_195905.gpx; path = ../../Downloads/mapstogpx20161009_195905.gpx; sourceTree = "<group>"; };
+		2B1740651DAADF6400196913 /* strokeTesterInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strokeTesterInterfaceController.swift; sourceTree = "<group>"; };
 		2B5DACBF1DA89F9400B42C6A /* SwimX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5DACC21DA89F9400B42C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B5DACC41DA89F9400B42C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +141,6 @@
 		2B5DACB61DA89F9400B42C6A = {
 			isa = PBXGroup;
 			children = (
-				2B1740631DAAD9D500196913 /* mapstogpx20161009_195905.gpx */,
 				2B5DACC11DA89F9400B42C6A /* SwimX */,
 				2B5DACD51DA89F9400B42C6A /* SwimX WatchKit App */,
 				2B5DACE41DA89F9500B42C6A /* SwimX WatchKit Extension */,
@@ -200,6 +199,7 @@
 				2BDB48EE1DA98A73000A230C /* StatsOneController.swift */,
 				2BDB48F01DA98A84000A230C /* StatsTwoController.swift */,
 				2BDB48F21DA98A96000A230C /* StatsThreeController.swift */,
+				2B1740651DAADF6400196913 /* strokeTesterInterfaceController.swift */,
 			);
 			path = "SwimX WatchKit Extension";
 			sourceTree = "<group>";
@@ -338,7 +338,6 @@
 				2B5DACCD1DA89F9400B42C6A /* LaunchScreen.storyboard in Resources */,
 				2B5DACCA1DA89F9400B42C6A /* Assets.xcassets in Resources */,
 				2B5DACC81DA89F9400B42C6A /* Main.storyboard in Resources */,
-				2B1740641DAAD9D500196913 /* mapstogpx20161009_195905.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +383,7 @@
 				2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */,
 				2B5DACE81DA89F9500B42C6A /* ExtensionDelegate.swift in Sources */,
 				2B5DACE61DA89F9500B42C6A /* InterfaceController.swift in Sources */,
+				2B1740661DAADF6400196913 /* strokeTesterInterfaceController.swift in Sources */,
 				2BDB48ED1DA98A5B000A230C /* DiveStatsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
