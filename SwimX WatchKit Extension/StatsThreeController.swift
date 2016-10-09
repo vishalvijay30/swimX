@@ -80,11 +80,9 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
             fabs(location.course-90-initialDirection)<=10) {
             
             numLaps+=1
-<<<<<<< HEAD
+
             lapsButtonLabel.setText("\(numLaps)")
-=======
-            lapsButtonLabel.setTitle("\(numLaps) laps")
->>>>>>> master
+
         }
     }
     
@@ -120,11 +118,9 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
       //  initialDirection = (locManager.location?.course)! //doubtful; think about better way
  */
         //set the current number of laps
-<<<<<<< HEAD
+
         lapsButtonLabel.setText("\(numLaps)")
-=======
-        lapsButtonLabel.setTitle("\(numLaps) laps")
->>>>>>> master
+
     }
 
     override func didDeactivate() {
