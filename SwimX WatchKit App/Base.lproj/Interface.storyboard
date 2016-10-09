@@ -76,13 +76,20 @@
             <objects>
                 <controller identifier="CustomPoolSize" id="9Aq-UJ-9a2" customClass="CustomTypeController" customModule="SwimX_WatchKit_Extension">
                     <items>
-                        <picker height="93" alignment="left" id="8v8-EV-y9r"/>
+                        <picker height="93" alignment="left" id="8v8-EV-y9r">
+                            <connections>
+                                <action selector="pickSize:" destination="9Aq-UJ-9a2" id="WS8-jW-iRq"/>
+                            </connections>
+                        </picker>
                         <button width="1" alignment="left" title="Swim" id="pdI-Lr-pPp">
                             <connections>
                                 <action selector="swim" destination="9Aq-UJ-9a2" id="Qh7-8g-t5S"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="selectPicker" destination="8v8-EV-y9r" id="O1c-9y-rNk"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-396" y="490"/>
@@ -137,7 +144,11 @@
                     </items>
                     <menu key="menu" id="CDq-Vu-dcD">
                         <items>
-                            <menuItem title="Menu Item" icon="accept" id="AUi-Lp-tMe"/>
+                            <menuItem title="Menu Item" icon="accept" id="AUi-Lp-tMe">
+                                <connections>
+                                    <action selector="exit" destination="UJH-py-ai7" id="mP0-1l-Q1W"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </controller>

@@ -22,6 +22,12 @@ class DiveStatsController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
+    
+    @IBAction func exit() {
+        
+        WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
+    }
+
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
