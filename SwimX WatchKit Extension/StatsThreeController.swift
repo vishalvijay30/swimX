@@ -21,11 +21,16 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        //set the current number of laps
+        lapsButtonLabel.setTitle("\(numLaps)")
+        
+        
         //Configure locationManager and set up delegate
         locManager.delegate = self
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         initialDirection = locManager.location!.course
         locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
+        
         
     }
     
@@ -92,6 +97,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
         
+        //<!------ WE MIGHT HAVE TO LEAVE UPDATE LOCATION RUNNING IN THE BACKGROUND IF WE WANT LIVE UPDATES !------>
         //stop updating the location when this view controller is deactivated to conserve battery
         locManager.stopUpdatingLocation()
     }
