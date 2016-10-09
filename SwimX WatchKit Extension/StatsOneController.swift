@@ -40,7 +40,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        print(CLLocationManager.authorizationStatus())
         
         //set up location manager and delegate
         locManager.delegate = self
@@ -65,7 +65,8 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         
         
         locManager.desiredAccuracy = kCLLocationAccuracyBest
-        locManager.startUpdatingLocation()        
+        locManager.startUpdatingLocation()
+        print(CLLocationManager.authorizationStatus())
     }
     
     @IBAction func exit() {
@@ -146,7 +147,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
+        print(CLLocationManager.authorizationStatus())
         // core location authorization 
         
         let authorizationStatus = CLLocationManager.authorizationStatus()
@@ -189,6 +190,8 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         //start a new workout
         self.workoutActive = true
         startWorkout()
+        
+        print(CLLocationManager.authorizationStatus())
         
     }
     

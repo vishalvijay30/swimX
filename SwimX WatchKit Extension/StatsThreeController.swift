@@ -34,7 +34,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         
     }
     
-    //If authorization status changes
+    /*If authorization status changes
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
         switch status {
@@ -60,6 +60,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         }
         
     }
+    */
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print ("\(error)")
