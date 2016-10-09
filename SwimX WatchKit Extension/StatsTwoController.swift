@@ -30,7 +30,7 @@ class StatsTwoController: WKInterfaceController {
         
         //display the current flip turn time
         
-        flipTurnTimeButton.setText("\(flipTurnTime)")
+        flipTurnTimeButton.setText("\(flipTurnTimeArr[flipTurnTimeArr.count-1])")
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkAccelerationCondition), userInfo: nil, repeats: true) // TODO: invalidate it
         // Configure interface objects here.
@@ -70,6 +70,7 @@ class StatsTwoController: WKInterfaceController {
             } else { //need help with invalidate condition
                 motionManager.stopAccelerometerUpdates()
                 flipTurnTimeArr.append(flipTurnTime)
+                flipTurnTimeButton.setText("\(flipTurnTimeArr[flipTurnTimeArr.count-1])")
                 flipTurnTime = 0.0
             }
         } else {
@@ -97,7 +98,7 @@ class StatsTwoController: WKInterfaceController {
         //shows instantaneous or last flip turn time while active
         //we must show average when session ends
         flipTurnTime += 0.1
-        flipTurnTimeButton.setText("\(flipTurnTime)")
+        //flipTurnTimeButton.setText("\(flipTurnTime)")
     }
     
     override func willActivate() {
