@@ -23,12 +23,15 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         super.awake(withContext: context)
         
         //Configure locationManager and set up delegate
-        /*
+        
         locManager.delegate = self
+        locManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
-        initialDirection = locManager.location!.course //doubtful; think about better way
-        */
+     //   initialDirection = locManager.location!.course //doubtful; think about better way
+        }
+        
     }
     
     //If authorization status changes
@@ -106,10 +109,11 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         default:
             print("unexpectedText")
         }
-        
+        /*
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
       //  initialDirection = (locManager.location?.course)! //doubtful; think about better way
+ */
         //set the current number of laps
         lapsButtonLabel.setText("\(numLaps)")
     }
