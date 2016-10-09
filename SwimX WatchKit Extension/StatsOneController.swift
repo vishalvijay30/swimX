@@ -101,14 +101,14 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     
     func updateSpeed(location:CLLocation) -> Void {
         currentSpeed = location.speed
-        speedLabel.setText("\(currentSpeed)")
+        speedLabel.setText("\(currentSpeed) m/s")
         
     }
     
     func updateDistance(location:CLLocation) -> Void {
         if locPrevious != nil {
             currentDistance += location.distance(from: locPrevious!)
-            distanceLabel.setText("\(currentDistance)")
+            distanceLabel.setText("\(currentDistance) m")
             locPrevious = location
         } else {
             locPrevious = location
