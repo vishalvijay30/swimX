@@ -148,7 +148,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-<<<<<<< HEAD
+
         print(CLLocationManager.authorizationStatus())
         // core location authorization 
         
@@ -168,11 +168,9 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
             print("unexpectedText")
         }
 
-        
-        
-=======
         //locManager.requestWhenInUseAuthorization()
->>>>>>> master
+        
+
         speedLabel.setText("\(currentSpeed)")
         distanceLabel.setText("\(currentDistance)")
         guard HKHealthStore.isHealthDataAvailable() == true else {
