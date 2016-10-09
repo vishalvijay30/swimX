@@ -29,6 +29,7 @@
 		2BDB48EF1DA98A73000A230C /* StatsOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48EE1DA98A73000A230C /* StatsOneController.swift */; };
 		2BDB48F11DA98A84000A230C /* StatsTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F01DA98A84000A230C /* StatsTwoController.swift */; };
 		2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F21DA98A96000A230C /* StatsThreeController.swift */; };
+		2BDB48F51DA9D67B000A230C /* OpenSwimController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F41DA9D67B000A230C /* OpenSwimController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		2BDB48EE1DA98A73000A230C /* StatsOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsOneController.swift; sourceTree = "<group>"; };
 		2BDB48F01DA98A84000A230C /* StatsTwoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTwoController.swift; sourceTree = "<group>"; };
 		2BDB48F21DA98A96000A230C /* StatsThreeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsThreeController.swift; sourceTree = "<group>"; };
+		2BDB48F41DA9D67B000A230C /* OpenSwimController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSwimController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				2BDB48EE1DA98A73000A230C /* StatsOneController.swift */,
 				2BDB48F01DA98A84000A230C /* StatsTwoController.swift */,
 				2BDB48F21DA98A96000A230C /* StatsThreeController.swift */,
+				2BDB48F41DA9D67B000A230C /* OpenSwimController.swift */,
 			);
 			path = "SwimX WatchKit Extension";
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */,
 				2B5DACE81DA89F9500B42C6A /* ExtensionDelegate.swift in Sources */,
 				2B5DACE61DA89F9500B42C6A /* InterfaceController.swift in Sources */,
+				2BDB48F51DA9D67B000A230C /* OpenSwimController.swift in Sources */,
 				2BDB48ED1DA98A5B000A230C /* DiveStatsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

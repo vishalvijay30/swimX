@@ -1,5 +1,5 @@
 //
-//  CustomTypeController.swift
+//  OpenSwimController.swift
 //  SwimX
 //
 //  Created by Anushk Mittal on 10/8/16.
@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class CustomTypeController: WKInterfaceController {
+class OpenSwimController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -22,14 +22,11 @@ class CustomTypeController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-    
-    @IBAction func swim() {
+
+    @IBAction func exit() {
         
-        WKInterfaceController.reloadRootControllers(withNames: ["statsOne", "statsTwo", "statsThree"], contexts: nil)
-        
+                WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
     }
-    
-    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()

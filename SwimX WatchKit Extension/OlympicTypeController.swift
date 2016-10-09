@@ -25,9 +25,11 @@ class OlympicTypeController: WKInterfaceController {
     
     
     @IBAction func longType() {
+                WKInterfaceController.reloadRootControllers(withNames: ["statsOne", "statsTwo", "statsThree"], contexts: nil)
     }
     
     @IBAction func shortType() {
+                WKInterfaceController.reloadRootControllers(withNames: ["statsOne", "statsTwo", "statsThree"], contexts: nil)
     }
     
 

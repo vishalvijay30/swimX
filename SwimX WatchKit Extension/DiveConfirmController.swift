@@ -22,6 +22,13 @@ class DiveConfirmController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
+    
+    @IBAction func confirm() {
+        // calls the stats controller
+        
+        WKInterfaceController.reloadRootControllers(withNames: ["diveStats"], contexts: nil)
+    }
+    
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
