@@ -33,6 +33,14 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
         locManager.startUpdatingLocation()        
     }
     
+<<<<<<< HEAD
+    @IBAction func exit() {
+        
+        WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
+    }
+    
+
+=======
     //If authorization status changes
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
@@ -92,6 +100,7 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
         return currentDistance
     }
     
+>>>>>>> master
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

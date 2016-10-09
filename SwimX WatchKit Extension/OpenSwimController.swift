@@ -1,5 +1,5 @@
 //
-//  DiveStatsController.swift
+//  OpenSwimController.swift
 //  SwimX
 //
 //  Created by Anushk Mittal on 10/8/16.
@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class DiveStatsController: WKInterfaceController {
+class OpenSwimController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -22,13 +22,11 @@ class DiveStatsController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-    
+
     @IBAction func exit() {
         
-        WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
+                WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
     }
-
-
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()

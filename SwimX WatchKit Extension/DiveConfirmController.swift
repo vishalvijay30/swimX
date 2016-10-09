@@ -8,9 +8,12 @@
 
 import WatchKit
 import Foundation
+import HealthKit
 
 
 class DiveConfirmController: WKInterfaceController {
+    
+    let healthStore = HKHealthStore()
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -21,7 +24,32 @@ class DiveConfirmController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        /* Requesting HealthKit authorization*/
+        guard HKHealthStore.isHealthDataAvailable() == true else {
+            print("not available")
+            return
+        }
+        
+        let typestoRead = Set([
+            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!,
+            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)!
+            ])
+        
+        self.healthStore.requestAuthorization(toShare: nil, read: typestoRead) { (success, error) -> Void in
+            if success == false {
+                NSLog(" Display not allowed")
+            }
+        }
+
     }
+    
+    @IBAction func confirm() {
+        // calls the stats controller
+        
+        WKInterfaceController.reloadRootControllers(withNames: ["diveStats"], contexts: nil)
+    }
+    
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible

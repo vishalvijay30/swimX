@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--main-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SwimX_WatchKit_App" customModuleProvider="target">
+                <controller identifier="main" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SwimX_WatchKit_App" customModuleProvider="target">
                     <items>
                         <button width="1" height="72" alignment="left" title="Swim" id="1eY-Iz-tXY">
                             <connections>
@@ -23,7 +23,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-65" y="-433"/>
+            <point key="canvasLocation" x="-203" y="-415"/>
         </scene>
         <!--Dive Confirm-->
         <scene sceneID="An3-jw-8Yp">
@@ -31,7 +31,11 @@
                 <controller title="Dive Confirm" id="iZR-KU-6cH" customClass="DiveConfirmController" customModule="SwimX_WatchKit_Extension">
                     <items>
                         <label width="136" height="106" alignment="left" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " numberOfLines="5" id="5zj-Ul-UUG"/>
-                        <button width="1" alignment="left" title="Confirm" id="2sj-Pc-r9i"/>
+                        <button width="1" alignment="left" title="Confirm" id="2sj-Pc-r9i">
+                            <connections>
+                                <action selector="confirm" destination="iZR-KU-6cH" id="M6U-jc-QB0"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -44,36 +48,56 @@
                     <items>
                         <button width="1" alignment="left" title="Olympic Swim" id="oBx-gA-r47">
                             <connections>
+                                <action selector="olympicSwim" destination="WB7-z4-zds" id="BYt-rd-igE"/>
                                 <segue destination="wpI-fm-2WB" kind="push" id="VIz-HT-IaL"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Custom Pool" id="NWS-vf-2JP">
                             <connections>
+                                <action selector="customSwim" destination="WB7-z4-zds" id="YJQ-yb-1lg"/>
                                 <segue destination="9Aq-UJ-9a2" kind="push" id="PLf-ef-EWY"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Open Swim" id="T7p-ph-IH0"/>
+                        <button width="1" alignment="left" title="Open Swim" id="T7p-ph-IH0">
+                            <connections>
+                                <action selector="openSwim" destination="WB7-z4-zds" id="lrE-ga-JZe"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="customSwim" destination="NWS-vf-2JP" id="W1t-KL-Aml"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-422" y="69"/>
+            <point key="canvasLocation" x="-819" y="50"/>
         </scene>
         <!--CustomPoolSize-->
         <scene sceneID="9um-V7-U3T">
             <objects>
                 <controller identifier="CustomPoolSize" id="9Aq-UJ-9a2" customClass="CustomTypeController" customModule="SwimX_WatchKit_Extension">
                     <items>
-                        <picker height="93" alignment="left" id="8v8-EV-y9r"/>
-                        <button width="1" alignment="left" title="Swim" id="pdI-Lr-pPp"/>
+                        <picker height="93" alignment="left" id="8v8-EV-y9r">
+                            <connections>
+                                <action selector="pickSize:" destination="9Aq-UJ-9a2" id="WS8-jW-iRq"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Swim" id="pdI-Lr-pPp">
+                            <connections>
+                                <action selector="swim" destination="9Aq-UJ-9a2" id="Qh7-8g-t5S"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="selectPicker" destination="8v8-EV-y9r" id="O1c-9y-rNk"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-396" y="490"/>
+            <point key="canvasLocation" x="-506" y="490"/>
         </scene>
         <!--Open Swim Stats-->
         <scene sceneID="QaU-bh-kfZ">
             <objects>
-                <controller identifier="Open Swim Stats" id="0Tg-hd-Ef0" customClass="StatsOneController" customModule="SwimX_WatchKit_Extension">
+                <controller identifier="openSwim" title="Open Swim Stats" id="0Tg-hd-Ef0" customClass="OpenSwimController" customModule="SwimX_WatchKit_Extension">
                     <items>
                         <timer width="136" height="35" alignment="left" id="bZp-4I-jtx"/>
                         <separator alignment="left" id="3SW-NO-n8Y"/>
@@ -92,17 +116,21 @@
                     </items>
                     <menu key="menu" id="sc7-xJ-9Yv">
                         <items>
-                            <menuItem title="Menu Item" icon="accept" id="rxd-Ps-XQG"/>
+                            <menuItem title="Menu Item" icon="accept" id="rxd-Ps-XQG">
+                                <connections>
+                                    <action selector="exit" destination="0Tg-hd-Ef0" id="bSx-1p-3Nw"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-141" y="884"/>
+            <point key="canvasLocation" x="-203" y="881"/>
         </scene>
         <!--Dive Stats-->
         <scene sceneID="Vpe-2z-4MB">
             <objects>
-                <controller identifier="Dive Stats" id="UJH-py-ai7" customClass="DiveStatsController" customModule="SwimX_WatchKit_Extension">
+                <controller identifier="diveStats" title="Dive Stats" id="UJH-py-ai7" customClass="DiveStatsController" customModule="SwimX_WatchKit_Extension">
                     <items>
                         <timer width="136" height="35" alignment="left" id="1xI-FR-c6I"/>
                         <separator alignment="left" id="0OT-cA-jZk"/>
@@ -116,7 +144,11 @@
                     </items>
                     <menu key="menu" id="CDq-Vu-dcD">
                         <items>
-                            <menuItem title="Menu Item" icon="accept" id="AUi-Lp-tMe"/>
+                            <menuItem title="Menu Item" icon="accept" id="AUi-Lp-tMe">
+                                <connections>
+                                    <action selector="exit" destination="UJH-py-ai7" id="mP0-1l-Q1W"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </controller>
@@ -126,7 +158,7 @@
         <!--Swim Stats - 1-->
         <scene sceneID="LwE-o6-39l">
             <objects>
-                <controller identifier="Swim Stats - 1" id="lzl-oK-jK7" customClass="StatsOneController" customModule="SwimX_WatchKit_Extension">
+                <controller identifier="statsOne" title="Swim Stats - 1" id="lzl-oK-jK7" customClass="StatsOneController" customModule="SwimX_WatchKit_Extension">
                     <items>
                         <timer width="136" height="35" alignment="left" id="upn-01-NEB"/>
                         <separator alignment="left" id="0I6-6D-1V8"/>
@@ -145,7 +177,11 @@
                     </items>
                     <menu key="menu" id="480-JL-Och">
                         <items>
-                            <menuItem title="Menu Item" icon="accept" id="zBS-wb-ofj"/>
+                            <menuItem title="Menu Item" icon="accept" id="zBS-wb-ofj">
+                                <connections>
+                                    <action selector="exit" destination="lzl-oK-jK7" id="lcH-Mh-OEK"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -160,10 +196,10 @@
         <!--Swim Stats - 2-->
         <scene sceneID="5Rc-pD-rPV">
             <objects>
-                <controller identifier="Swim Stats - 2" id="AIR-dD-D4O" customClass="StatsTwoController" customModule="SwimX_WatchKit_Extension">
+                <controller identifier="statsTwo" title="Swim Stats - 2" id="AIR-dD-D4O" customClass="StatsTwoController" customModule="SwimX_WatchKit_Extension">
                     <items>
-                        <button width="1" height="38" alignment="left" title="sc/lap" id="CAr-dm-rSk"/>
-                        <button width="1" height="48" alignment="left" title="flip turn" id="a8n-5I-kO9"/>
+                        <label width="136" height="42" alignment="left" text="sc/lap" textAlignment="center" id="dK8-4I-Do8"/>
+                        <label width="136" height="38" alignment="left" text="flip turn" textAlignment="center" id="hgp-PD-d50"/>
                         <label width="136" height="35" alignment="left" text="Stroke Rate" textAlignment="center" id="sH3-Qs-9hh"/>
                     </items>
                     <connections>
@@ -172,22 +208,22 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-860" y="884"/>
+            <point key="canvasLocation" x="-819" y="881"/>
         </scene>
         <!--Swim Stats - 3-->
         <scene sceneID="hXZ-R1-TcA">
             <objects>
-                <controller identifier="Swim Stats - 3" id="QsN-iI-SO7" customClass="StatsThreeController" customModule="SwimX_WatchKit_Extension">
+                <controller identifier="statsThree" title="Swim Stats - 3" id="QsN-iI-SO7" customClass="StatsThreeController" customModule="SwimX_WatchKit_Extension">
                     <items>
-                        <button width="1" height="60" alignment="left" title="meters/stroke" id="JBc-1I-Hli"/>
-                        <button width="1" height="60" alignment="left" title="laps" id="oVW-bu-NHh"/>
+                        <label height="60" alignment="left" text="meters / stroke" id="Vzj-6c-r48"/>
+                        <label width="136" height="38" alignment="left" text="laps" id="JGV-u6-vrB"/>
                     </items>
                     <connections>
                         <outlet property="lapsButtonLabel" destination="oVW-bu-NHh" id="Len-iw-rn1"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-574" y="884"/>
+            <point key="canvasLocation" x="-506" y="881"/>
         </scene>
         <!--OlympicSwimType-->
         <scene sceneID="uSW-iH-tvV">
@@ -212,7 +248,7 @@
                     </menu>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-794" y="490"/>
+            <point key="canvasLocation" x="-1136" y="490"/>
         </scene>
     </scenes>
 </document>
