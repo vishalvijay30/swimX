@@ -7,10 +7,13 @@
 // ..
 
 import UIKit
+import HealthKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let healthStore = HKHealthStore()
     var window: UIWindow?
 
 
@@ -39,6 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // HealthKit Authorization from  Watch
+    func applicationShouldRequestHealthAuthorization(_ application: UIApplication) {
+        
+        self.healthStore.handleAuthorizationForExtension { success, error in
+            
+        }
     }
 
 

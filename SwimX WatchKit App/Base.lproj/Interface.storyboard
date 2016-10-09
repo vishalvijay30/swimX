@@ -23,7 +23,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-65" y="-433"/>
+            <point key="canvasLocation" x="-203" y="-415"/>
         </scene>
         <!--Dive Confirm-->
         <scene sceneID="An3-jw-8Yp">
@@ -69,7 +69,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-422" y="69"/>
+            <point key="canvasLocation" x="-819" y="50"/>
         </scene>
         <!--CustomPoolSize-->
         <scene sceneID="9um-V7-U3T">
@@ -92,7 +92,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-396" y="490"/>
+            <point key="canvasLocation" x="-506" y="490"/>
         </scene>
         <!--Open Swim Stats-->
         <scene sceneID="QaU-bh-kfZ">
@@ -125,7 +125,7 @@
                     </menu>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-147" y="893"/>
+            <point key="canvasLocation" x="-203" y="881"/>
         </scene>
         <!--Dive Stats-->
         <scene sceneID="Vpe-2z-4MB">
@@ -242,7 +242,7 @@
                     </menu>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-794" y="490"/>
+            <point key="canvasLocation" x="-1136" y="490"/>
         </scene>
     </scenes>
 </document>

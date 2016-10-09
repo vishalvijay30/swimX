@@ -35,5 +35,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>for heart rate analysis, active energy burned</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>--</string>
 </dict>
 </plist>
