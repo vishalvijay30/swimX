@@ -30,11 +30,7 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
         //set up location manager and delegate
         locManager.delegate = self
         locManager.desiredAccuracy = kCLLocationAccuracyBest
-        locManager.startUpdatingLocation()
-        //locPrevious = locManager.location!
-        
-        //currentSpeed = locManager.location!.speed
-        //currentDistance = locManager.location!.distance(from: locManager.location!)
+        locManager.startUpdatingLocation()        
     }
     
     //If authorization status changes

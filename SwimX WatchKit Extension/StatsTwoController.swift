@@ -18,12 +18,19 @@ class StatsTwoController: WKInterfaceController {
     var statsOneController = StatsOneController()
     var previousAcceleration: CMAcceleration? = nil
     var timer = Timer()
+    var flipTurnTime: Double = 0.0
+    var flipTurnTimeArr: [Double] = []
     
     //dummy length variable for now; need to get length of pool from user
     let length = 25.0
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        //display the current flip turn time
+        
+        flipTurnTimeButton.setTitle("\(flipTurnTime)")
+        
         motionManager.accelerometerUpdateInterval = 0.1
         if (fabs(statsOneController.getCurrentDistance()-length)<=5.0) {
             //starting updates on current queue for now; not recommended in the future
@@ -53,8 +60,12 @@ class StatsTwoController: WKInterfaceController {
                 
                 //start timer
                 
-                timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(StatsTwoController.checkTime), userInfo: nil, repeats: true)
-                //checkTime(prevAcc: previousAcceleration!, currAcc: acceleration)
+                timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(StatsTwoController.updateTime), userInfo: nil, repeats: true)
+                
+            } else { //need help with invalidate condition
+                timer.invalidate()
+                flipTurnTimeArr.append(flipTurnTime)
+                flipTurnTime = 0.0
             }
         } else {
             
@@ -63,8 +74,23 @@ class StatsTwoController: WKInterfaceController {
         
     }
     
-    func checkTime(prevAcc: CMAcceleration, currAcc: CMAcceleration) -> Void {
-        
+    func getFlipTurnTimeArr() -> [Double] {
+        return flipTurnTimeArr
+    }
+    
+    func getAverageFlipTurnTime() -> Double {
+        var total: Double = 0.0
+        for i in flipTurnTimeArr {
+            total += i
+        }
+        return total/(Double(flipTurnTimeArr.count))
+    }
+    
+    func updateTime() -> Void {
+        //shows instantaneous or last flip turn time while active
+        //we must show average when session ends
+        flipTurnTime += 0.1
+        flipTurnTimeButton.setTitle("\(flipTurnTime)")
     }
     
     override func willActivate() {

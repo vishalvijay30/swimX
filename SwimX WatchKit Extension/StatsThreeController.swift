@@ -28,8 +28,8 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         //Configure locationManager and set up delegate
         locManager.delegate = self
         locManager.desiredAccuracy = kCLLocationAccuracyBest
-        initialDirection = locManager.location!.course
         locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
+        initialDirection = locManager.location!.course //doubtful; think about better way
         
         
     }
