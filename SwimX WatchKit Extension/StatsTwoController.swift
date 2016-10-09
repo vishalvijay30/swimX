@@ -29,9 +29,11 @@ class StatsTwoController: WKInterfaceController {
         super.awake(withContext: context)
         
         //display the current flip turn time
-        
-        flipTurnTimeButton.setText("\(flipTurnTimeArr[flipTurnTimeArr.count-1])")
-        
+        if (flipTurnTimeArr.count>0) {
+            flipTurnTimeButton.setText("\(flipTurnTimeArr[flipTurnTimeArr.count-1])")
+        } else {
+            flipTurnTimeButton.setText("0.0")
+        }
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkAccelerationCondition), userInfo: nil, repeats: true) // TODO: invalidate it
         // Configure interface objects here.
     }
