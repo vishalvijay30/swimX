@@ -67,7 +67,7 @@ class StatsTwoController: WKInterfaceController {
                 //timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(StatsTwoController.updateTime), userInfo: nil, repeats: true)
                 self.updateTime()
                 
-            } else { //need help with invalidate condition
+            } else { 
                 motionManager.stopAccelerometerUpdates()
                 flipTurnTimeArr.append(flipTurnTime)
                 flipTurnTimeButton.setText("\(flipTurnTimeArr[flipTurnTimeArr.count-1])")
