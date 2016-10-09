@@ -10,7 +10,7 @@ import WatchKit
 import HealthKit
 import CoreLocation
 import Foundation
-import CoreLocation
+
 
 
 class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLocationManagerDelegate {
@@ -55,6 +55,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         if let workout = self.session {
             healthStore.end(workout)
         }
+        locManager.stopUpdatingLocation()
         
         WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
     }
@@ -126,6 +127,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        //locManager.requestWhenInUseAuthorization()
         speedLabel.setText("\(currentSpeed)")
         distanceLabel.setText("\(currentDistance)")
         guard HKHealthStore.isHealthDataAvailable() == true else {

@@ -101,7 +101,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         
         //<!------ WE MIGHT HAVE TO LEAVE UPDATE LOCATION RUNNING IN THE BACKGROUND IF WE WANT LIVE UPDATES !------>
         //stop updating the location when this view controller is deactivated to conserve battery
-        locManager.stopUpdatingLocation()
+        //locManager.stopUpdatingLocation()
     }
 
 }
