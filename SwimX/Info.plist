@@ -39,5 +39,7 @@
 	<string>for heart rate analysis, active energy burned</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>--</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Core Location access for swim analysis</string>
 </dict>
 </plist>
