@@ -8,10 +8,11 @@
 
 import WatchKit
 import HealthKit
+import CoreLocation
 import Foundation
 
 
-class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate {
+class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLocationManagerDelegate {
     
     
     @IBOutlet var heartLabel: WKInterfaceLabel!
