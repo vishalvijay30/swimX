@@ -29,6 +29,10 @@
 		2BDB48EF1DA98A73000A230C /* StatsOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48EE1DA98A73000A230C /* StatsOneController.swift */; };
 		2BDB48F11DA98A84000A230C /* StatsTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F01DA98A84000A230C /* StatsTwoController.swift */; };
 		2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F21DA98A96000A230C /* StatsThreeController.swift */; };
+		C91EE6E81DA99694009C7B7F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6E71DA99694009C7B7F /* CoreMotion.framework */; };
+		C91EE6EA1DA996A5009C7B7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6E91DA996A5009C7B7F /* CoreLocation.framework */; };
+		C91EE6EC1DA9970E009C7B7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */; };
+		C91EE6EE1DA99714009C7B7F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +106,10 @@
 		2BDB48EE1DA98A73000A230C /* StatsOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsOneController.swift; sourceTree = "<group>"; };
 		2BDB48F01DA98A84000A230C /* StatsTwoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTwoController.swift; sourceTree = "<group>"; };
 		2BDB48F21DA98A96000A230C /* StatsThreeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsThreeController.swift; sourceTree = "<group>"; };
+		C91EE6E71DA99694009C7B7F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		C91EE6E91DA996A5009C7B7F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91EE6EA1DA996A5009C7B7F /* CoreLocation.framework in Frameworks */,
+				C91EE6E81DA99694009C7B7F /* CoreMotion.framework in Frameworks */,
 				2BDB48E31DA974E6000A230C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +127,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91EE6EE1DA99714009C7B7F /* CoreMotion.framework in Frameworks */,
+				C91EE6EC1DA9970E009C7B7F /* CoreLocation.framework in Frameworks */,
 				2BDB48DF1DA974DE000A230C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +204,10 @@
 		2BDB48DD1DA974DE000A230C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */,
+				C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */,
+				C91EE6E91DA996A5009C7B7F /* CoreLocation.framework */,
+				C91EE6E71DA99694009C7B7F /* CoreMotion.framework */,
 				2BDB48E21DA974E6000A230C /* HealthKit.framework */,
 				2BDB48DE1DA974DE000A230C /* HealthKit.framework */,
 			);

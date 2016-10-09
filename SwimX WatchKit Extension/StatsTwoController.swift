@@ -8,10 +8,13 @@
 
 import WatchKit
 import Foundation
-
+import CoreMotion
+import CoreLocation
 
 class StatsTwoController: WKInterfaceController {
-
+    
+    
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
