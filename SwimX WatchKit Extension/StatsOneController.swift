@@ -10,7 +10,7 @@ import WatchKit
 import HealthKit
 import CoreLocation
 import Foundation
-import CoreLocation
+
 
 
 class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLocationManagerDelegate {
@@ -76,6 +76,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         if let workout = self.session {
             healthStore.end(workout)
         }
+        locManager.stopUpdatingLocation()
         
         WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
     }
@@ -122,14 +123,14 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     
     func updateSpeed(location:CLLocation) -> Void {
         currentSpeed = location.speed
-        speedLabel.setText("\(currentSpeed)")
+        speedLabel.setText("\(currentSpeed) m/s")
         
     }
     
     func updateDistance(location:CLLocation) -> Void {
         if locPrevious != nil {
             currentDistance += location.distance(from: locPrevious!)
-            distanceLabel.setText("\(currentDistance)")
+            distanceLabel.setText("\(currentDistance) m")
             locPrevious = location
         } else {
             locPrevious = location
@@ -147,6 +148,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+<<<<<<< HEAD
         print(CLLocationManager.authorizationStatus())
         // core location authorization 
         
@@ -168,6 +170,9 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
 
         
         
+=======
+        //locManager.requestWhenInUseAuthorization()
+>>>>>>> master
         speedLabel.setText("\(currentSpeed)")
         distanceLabel.setText("\(currentDistance)")
         guard HKHealthStore.isHealthDataAvailable() == true else {

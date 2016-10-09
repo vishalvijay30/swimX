@@ -65,6 +65,7 @@ class StatsTwoController: WKInterfaceController {
                 
             } else { //need help with invalidate condition
                 timer.invalidate()
+                motionManager.stopAccelerometerUpdates()
                 flipTurnTimeArr.append(flipTurnTime)
                 flipTurnTime = 0.0
             }

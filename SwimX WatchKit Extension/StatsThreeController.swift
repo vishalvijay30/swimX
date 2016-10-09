@@ -80,7 +80,11 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
             fabs(location.course-90-initialDirection)<=10) {
             
             numLaps+=1
+<<<<<<< HEAD
             lapsButtonLabel.setText("\(numLaps)")
+=======
+            lapsButtonLabel.setTitle("\(numLaps) laps")
+>>>>>>> master
         }
     }
     
@@ -116,7 +120,11 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
       //  initialDirection = (locManager.location?.course)! //doubtful; think about better way
  */
         //set the current number of laps
+<<<<<<< HEAD
         lapsButtonLabel.setText("\(numLaps)")
+=======
+        lapsButtonLabel.setTitle("\(numLaps) laps")
+>>>>>>> master
     }
 
     override func didDeactivate() {
@@ -125,7 +133,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         
         //<!------ WE MIGHT HAVE TO LEAVE UPDATE LOCATION RUNNING IN THE BACKGROUND IF WE WANT LIVE UPDATES !------>
         //stop updating the location when this view controller is deactivated to conserve battery
-        locManager.stopUpdatingLocation()
+        //locManager.stopUpdatingLocation()
     }
 
 }
