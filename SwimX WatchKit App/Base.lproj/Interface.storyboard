@@ -160,6 +160,8 @@
                         </items>
                     </menu>
                     <connections>
+                        <outlet property="calsBurned" destination="weq-c4-u2C" id="sEd-rd-fJ0"/>
+                        <outlet property="heartLabel" destination="kqM-19-jVm" id="SGg-Ed-S2J"/>
                         <outlet property="distanceLabel" destination="dz7-zw-JXc" id="JQm-gs-Mqd"/>
                         <outlet property="speedLabel" destination="RC5-H9-Su7" id="ioO-xu-VYm"/>
                         <segue destination="AIR-dD-D4O" kind="relationship" relationship="nextPage" id="GBS-SQ-2qa"/>

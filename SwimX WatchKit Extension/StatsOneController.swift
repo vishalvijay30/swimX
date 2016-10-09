@@ -12,7 +12,8 @@ import CoreLocation
 import Foundation
 import CoreLocation
 
-class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
+
+class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLocationManagerDelegate {
     
     var locManager = CLLocationManager()
     var currentSpeed: Double = 0.0
@@ -21,6 +22,22 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
     @IBOutlet var speedLabel: WKInterfaceLabel!
     var locPrevious:CLLocation? = nil
     
+    @IBOutlet var heartLabel: WKInterfaceLabel!
+    @IBOutlet var calsBurned: WKInterfaceLabel!
+    
+    
+    let healthStore = HKHealthStore()
+
+    //State of the app - is the workout activated
+    var workoutActive = false
+    
+    // define the activity type and location
+    var session : HKWorkoutSession?
+    let heartRateUnit = HKUnit(from: "count/min")
+    //var anchor = HKQueryAnchor(fromValue: Int(HKAnchoredObjectQueryNoAnchor))
+    var currenQuery : HKQuery?
+
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -35,7 +52,6 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
         locManager.startUpdatingLocation()        
     }
     
-<<<<<<< HEAD
     @IBAction func exit() {
         
         //finish the current workout
@@ -51,7 +67,7 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
         print("not allowed")
     }
 
-=======
+
     //If authorization status changes
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
@@ -111,7 +127,6 @@ class StatsOneController: WKInterfaceController, CLLocationManagerDelegate {
         return currentDistance
     }
     
->>>>>>> master
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
