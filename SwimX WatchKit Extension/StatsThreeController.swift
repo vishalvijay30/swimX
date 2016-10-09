@@ -88,9 +88,28 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         locManager.delegate = self
+        
+        // core location authorization
+        
+        let authorizationStatus = CLLocationManager.authorizationStatus()
+        
+        switch authorizationStatus {
+        case .notDetermined:
+            locManager.requestWhenInUseAuthorization()
+            
+        case .authorizedWhenInUse:
+            locManager.requestLocation()
+            
+        case .denied:
+            print("denied")
+            
+        default:
+            print("unexpectedText")
+        }
+        
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
-     //   initialDirection = locManager.location!.course //doubtful; think about better way
+      //  initialDirection = (locManager.location?.course)! //doubtful; think about better way
         //set the current number of laps
         lapsButtonLabel.setText("\(numLaps)")
     }
