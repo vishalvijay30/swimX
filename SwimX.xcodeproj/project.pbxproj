@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1740641DAAD9D500196913 /* mapstogpx20161009_195905.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2B1740631DAAD9D500196913 /* mapstogpx20161009_195905.gpx */; };
 		2B5DACC31DA89F9400B42C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DACC21DA89F9400B42C6A /* AppDelegate.swift */; };
 		2B5DACC51DA89F9400B42C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DACC41DA89F9400B42C6A /* ViewController.swift */; };
 		2B5DACC81DA89F9400B42C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DACC61DA89F9400B42C6A /* Main.storyboard */; };
@@ -29,12 +30,10 @@
 		2BDB48EF1DA98A73000A230C /* StatsOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48EE1DA98A73000A230C /* StatsOneController.swift */; };
 		2BDB48F11DA98A84000A230C /* StatsTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F01DA98A84000A230C /* StatsTwoController.swift */; };
 		2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F21DA98A96000A230C /* StatsThreeController.swift */; };
-		2BDB48F51DA9D67B000A230C /* OpenSwimController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB48F41DA9D67B000A230C /* OpenSwimController.swift */; };
 		C91EE6E81DA99694009C7B7F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6E71DA99694009C7B7F /* CoreMotion.framework */; };
 		C91EE6EA1DA996A5009C7B7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6E91DA996A5009C7B7F /* CoreLocation.framework */; };
 		C91EE6EF1DA9F1B9009C7B7F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */; };
 		C91EE6F01DA9F1BD009C7B7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B1740631DAAD9D500196913 /* mapstogpx20161009_195905.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = mapstogpx20161009_195905.gpx; path = ../../Downloads/mapstogpx20161009_195905.gpx; sourceTree = "<group>"; };
 		2B5DACBF1DA89F9400B42C6A /* SwimX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5DACC21DA89F9400B42C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B5DACC41DA89F9400B42C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,12 +108,10 @@
 		2BDB48EE1DA98A73000A230C /* StatsOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsOneController.swift; sourceTree = "<group>"; };
 		2BDB48F01DA98A84000A230C /* StatsTwoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTwoController.swift; sourceTree = "<group>"; };
 		2BDB48F21DA98A96000A230C /* StatsThreeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsThreeController.swift; sourceTree = "<group>"; };
-		2BDB48F41DA9D67B000A230C /* OpenSwimController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSwimController.swift; sourceTree = "<group>"; };
 		C91EE6E71DA99694009C7B7F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		C91EE6E91DA996A5009C7B7F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +141,7 @@
 		2B5DACB61DA89F9400B42C6A = {
 			isa = PBXGroup;
 			children = (
+				2B1740631DAAD9D500196913 /* mapstogpx20161009_195905.gpx */,
 				2B5DACC11DA89F9400B42C6A /* SwimX */,
 				2B5DACD51DA89F9400B42C6A /* SwimX WatchKit App */,
 				2B5DACE41DA89F9500B42C6A /* SwimX WatchKit Extension */,
@@ -339,6 +338,7 @@
 				2B5DACCD1DA89F9400B42C6A /* LaunchScreen.storyboard in Resources */,
 				2B5DACCA1DA89F9400B42C6A /* Assets.xcassets in Resources */,
 				2B5DACC81DA89F9400B42C6A /* Main.storyboard in Resources */,
+				2B1740641DAAD9D500196913 /* mapstogpx20161009_195905.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
