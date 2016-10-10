@@ -18,6 +18,9 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     var locManager = CLLocationManager()
     var currentSpeed: Double = 0.0
     var currentDistance: Double = 0.0
+    @IBOutlet var timeLabel: WKInterfaceTimer!
+
+    
     @IBOutlet var distanceLabel: WKInterfaceLabel!
     @IBOutlet var speedLabel: WKInterfaceLabel!
     var locPrevious:CLLocation? = nil
@@ -40,6 +43,9 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        timeLabel.setDate(Date()) //Set Display Timer date to current time (invoked once)
+        
         print(CLLocationManager.authorizationStatus())
         
         //set up location manager and delegate
@@ -70,6 +76,9 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     }
     
     @IBAction func exit() {
+        
+        // timer stop
+        timeLabel.stop()
         
         //finish the current workout
         self.workoutActive = false
@@ -148,6 +157,8 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        timeLabel.start() // Start Display timer
 
         print(CLLocationManager.authorizationStatus())
         // core location authorization 
