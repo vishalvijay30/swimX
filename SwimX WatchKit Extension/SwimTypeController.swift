@@ -33,7 +33,8 @@ class SwimTypeController: WKInterfaceController {
         
         let typestoRead = Set([
             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!,
-            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)!
+            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)!,
+            HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
             ])
         
         self.healthStore.requestAuthorization(toShare: nil, read: typestoRead) { (success, error) -> Void in

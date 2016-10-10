@@ -18,6 +18,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     var locManager = CLLocationManager()
     var currentSpeed: Double = 0.0
     var currentDistance: Double = 0.0
+    var weight_value: Double = 0.0
     @IBOutlet var timeLabel: WKInterfaceTimer!
 
     
@@ -30,6 +31,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     
     
     let healthStore = HKHealthStore()
+    var weight : HKQuantitySample?
 
     //State of the app - is the workout activated
     var workoutActive = false
@@ -156,6 +158,8 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        self.getWeight()
         
         timeLabel.start() // Start Display timer
 
@@ -314,5 +318,78 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
            // self.animateHeart()
         }
     }
+    
+    /** Get last recorded weight */
+    func getWeight() {
+        
+        print("TODO: get Weight")
+        let sampleType = HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)
+        self.readMostRecentSample(sampleType: sampleType!, completion: { (mostRecentWeight, error) -> Void in
+            
+            if( error != nil ) {
+                print("Error reading weight from HealthKit Store: \(error?.localizedDescription)")
+                return;
+            }
+            
+            var weightLocalizedString = ""
+            
+            self.weight = mostRecentWeight as? HKQuantitySample;
+            if let kilograms = self.weight?.quantity.doubleValue(for: HKUnit.pound()) {
+                let weightFormatter = MassFormatter()
+                weightFormatter.isForPersonMassUse = true;
+                weightLocalizedString = weightFormatter.string(fromKilograms: kilograms)
+                self.weight_value = kilograms
+                print(self.weight_value)
+                print(kilograms)
+            }
+            
+            
+            DispatchQueue.main.async(execute: { () -> Void in
+                print("first print")
+                print(weightLocalizedString)
+                print("second print")
+                
+                //self.weight_value = Double(weightLocalizedString)!
+                
+            })
+        })
+        
+    }
+    
+    /** Common method to execute query */
+    func readMostRecentSample(sampleType:HKSampleType , completion: ((HKSample?, NSError?) -> Void)!)
+    {
+        
+        // Predicate
+        let past = Date.distantPast as Date
+        let now   = Date()
+        let mostRecentPredicate = HKQuery.predicateForSamples(withStart: past as Date, end:now as Date, options: [])
+        
+        // Sort descriptor to return the samples in descending order
+        let sortDescriptor = NSSortDescriptor(key:HKSampleSortIdentifierStartDate, ascending: false)
+        
+        // Limit the number of samples returned by the query to just 1 (the most recent)
+        let limit = 1
+        
+        // Query
+        let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: mostRecentPredicate, limit: limit, sortDescriptors: [sortDescriptor])
+        { (sampleQuery, results, error ) -> Void in
+            
+            if error != nil  {
+                print(error)
+            }
+            
+            // Get the first sample
+            let mostRecentSample = results?.first as? HKQuantitySample
+            
+            // Execute the completion closure
+            if completion != nil {
+                completion(mostRecentSample,nil)
+            }
+        }
+        // Execute the Query
+        self.healthStore.execute(sampleQuery)
+    }
+    
 
 }
