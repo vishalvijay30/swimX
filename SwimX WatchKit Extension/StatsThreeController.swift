@@ -17,6 +17,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
     var numLaps: Int = 0
     var initialDirection:Double = 0.0
 
+    @IBOutlet var metersPerStrokeLabel: WKInterfaceLabel!
     @IBOutlet var lapsButtonLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
@@ -94,6 +95,10 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
     
     func getNumLaps() -> Int {
         return numLaps
+    }
+    
+    func getMetersPerStrokeLabel() -> WKInterfaceLabel {
+        return self.metersPerStrokeLabel
     }
 
     override func willActivate() {

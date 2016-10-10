@@ -77,6 +77,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
             healthStore.end(workout)
         }
         locManager.stopUpdatingLocation()
+        
         WKInterfaceController.reloadRootControllers(withNames: ["main"], contexts: nil)
     }
     
@@ -202,10 +203,6 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-        
-        //<!------ WE MIGHT HAVE TO LEAVE UPDATE LOCATION RUNNING IN THE BACKGROUND IF WE WANT LIVE UPDATES !------>
-        //stop updating the location when this view controller is deactivated to conserve battery
-        locManager.stopUpdatingLocation()
     }
     
     

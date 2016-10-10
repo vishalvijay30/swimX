@@ -35,6 +35,8 @@
 		C91EE6EF1DA9F1B9009C7B7F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */; };
 		C91EE6F01DA9F1BD009C7B7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */; };
 		C9291E2D1DAB055D00B2E36A /* RunningBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9291E2C1DAB055D00B2E36A /* RunningBuffer.swift */; };
+		C9291E2F1DAB1BAF00B2E36A /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9291E2E1DAB1BAF00B2E36A /* MotionManager.swift */; };
+		C9291E311DAB1FB400B2E36A /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9291E301DAB1FB400B2E36A /* WorkoutManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		C91EE6EB1DA9970E009C7B7F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		C91EE6ED1DA99714009C7B7F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		C9291E2C1DAB055D00B2E36A /* RunningBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningBuffer.swift; sourceTree = "<group>"; };
+		C9291E2E1DAB1BAF00B2E36A /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		C9291E301DAB1FB400B2E36A /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,8 @@
 				2BDB48F21DA98A96000A230C /* StatsThreeController.swift */,
 				2B1740651DAADF6400196913 /* strokeTesterInterfaceController.swift */,
 				C9291E2C1DAB055D00B2E36A /* RunningBuffer.swift */,
+				C9291E2E1DAB1BAF00B2E36A /* MotionManager.swift */,
+				C9291E301DAB1FB400B2E36A /* WorkoutManager.swift */,
 			);
 			path = "SwimX WatchKit Extension";
 			sourceTree = "<group>";
@@ -378,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BDB48EF1DA98A73000A230C /* StatsOneController.swift in Sources */,
+				C9291E311DAB1FB400B2E36A /* WorkoutManager.swift in Sources */,
+				C9291E2F1DAB1BAF00B2E36A /* MotionManager.swift in Sources */,
 				2BDB48EB1DA98A3E000A230C /* CustomTypeController.swift in Sources */,
 				2BDB48E71DA98A07000A230C /* DiveConfirmController.swift in Sources */,
 				2BDB48E91DA98A2C000A230C /* OlympicTypeController.swift in Sources */,
