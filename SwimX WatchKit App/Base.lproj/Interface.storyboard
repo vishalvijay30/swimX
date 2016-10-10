@@ -63,9 +63,19 @@
                                 <action selector="openSwim" destination="WB7-z4-zds" id="lrE-ga-JZe"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Button" id="pwC-Rh-iT1">
+                        <button width="1" alignment="left" title="Stat-1" id="1Wf-wg-Sb7">
                             <connections>
-                                <segue destination="vZ3-Hz-GeA" kind="push" id="eqy-ay-hhr"/>
+                                <segue destination="lzl-oK-jK7" kind="push" id="IyP-yQ-b1j"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Stat-2" id="n2Q-ky-Qvc">
+                            <connections>
+                                <segue destination="AIR-dD-D4O" kind="push" id="dsv-Ap-Cz2"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Stat-3" id="pwC-Rh-iT1">
+                            <connections>
+                                <segue destination="QsN-iI-SO7" kind="push" id="mb8-nS-u04"/>
                             </connections>
                         </button>
                     </items>
