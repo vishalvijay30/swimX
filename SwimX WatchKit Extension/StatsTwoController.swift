@@ -50,7 +50,7 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
     
     func checkAccelerationCondition() {
 
-        if (fabs(statsOneController.getCurrentDistance()-length)<=5.0) {
+        if (fabs(statsOneController.getCurrentDistance().truncatingRemainder(dividingBy: length))<=5.0) {
             //starting updates on current queue for now; not recommended in the future
             motionManager.accelerometerUpdateInterval = 0.1
             motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
