@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwimX WatchKit Extension/StatsTwoController.swift"
-            timestampString = "497677553.644547"
+            timestampString = "497762861.352961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "StatsTwoController"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwimX WatchKit Extension/StatsOneController.swift"
-            timestampString = "497677711.799002"
+            timestampString = "497762861.352961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "StatsOneController"
             landmarkType = "3">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwimX WatchKit Extension/StatsTwoController.swift"
-            timestampString = "497747822.719422"
+            timestampString = "497762861.352961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "startTimer(acceleration:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwimX WatchKit Extension/StatsTwoController.swift"
-            timestampString = "497747822.719422"
+            timestampString = "497762861.352961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "startTimer(acceleration:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwimX WatchKit Extension/StatsTwoController.swift"
-            timestampString = "497747822.719422"
+            timestampString = "497762861.352961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "StatsTwoController"
             landmarkType = "3">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwimX WatchKit Extension/StatsTwoController.swift"
-            timestampString = "497747822.719422"
+            timestampString = "497762861.352961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "startTimer(acceleration:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,12 +106,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwimX WatchKit Extension/StatsTwoController.swift"
-            timestampString = "497747822.719422"
+            timestampString = "497762861.352961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "getAverageFlipTurnTime()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwimX WatchKit Extension/StatsTwoController.swift"
+            timestampString = "497762861.352961"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "getStrokesPerLap()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
