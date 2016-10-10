@@ -44,6 +44,7 @@ class WorkoutManager: MotionManagerDelegate {
     // MARK: WorkoutManager
     
     func startWorkout() {
+        /*
         // If we have already started the workout, then do nothing.
         if (session != nil) {
             return
@@ -62,10 +63,15 @@ class WorkoutManager: MotionManagerDelegate {
         
         // Start the workout session and device motion updates.
         healthStore.start(session!)
+        
+        */
+        // already in-session from StatOne
+        
         motionManager.startUpdates()
     }
     
     func stopWorkout() {
+        /*
         // If we have already stopped the workout, then do nothing.
         if (session == nil) {
             return
@@ -77,6 +83,11 @@ class WorkoutManager: MotionManagerDelegate {
         
         // Clear the workout session.
         session = nil
+ */
+        // already in-session from StatOne
+        
+        // Stop the device motion
+        motionManager.stopUpdates()
     }
     
     // MARK: MotionManagerDelegate
