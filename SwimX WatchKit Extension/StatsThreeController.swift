@@ -30,6 +30,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled() {
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
+        
         //print(locManager.location)
         //initialDirection = locManager.location!.course //doubtful; think about better way
         }

@@ -149,11 +149,12 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     }
     
     func getCurrentSpeed() -> Double {
-        return currentSpeed
+        //round to 2 decimal places
+        return round(100 * currentSpeed) / 100
     }
     
     func getCurrentDistance() -> Double {
-        return currentDistance
+        return round(100 * currentDistance) / 100
     }
     
     override func willActivate() {

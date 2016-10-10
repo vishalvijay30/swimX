@@ -33,6 +33,7 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
     let length = 25.0
     
     override func awake(withContext context: Any?) {
+        //print(motionManager.)
         super.awake(withContext: context)
         workoutManager.delegate = self
         workoutManager.startWorkout() //need to stop workout somewhere
