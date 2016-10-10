@@ -29,7 +29,8 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled() {
         locManager.desiredAccuracy = kCLLocationAccuracyBest
         locManager.startUpdatingLocation() //Stop updating location when didDeactivate()
-     //   initialDirection = locManager.location!.course //doubtful; think about better way
+        //print(locManager.location)
+        //initialDirection = locManager.location!.course //doubtful; think about better way
         }
         
     }
@@ -68,6 +69,11 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let latestLocation:CLLocation = locations[locations.count-1]
+        //need to ensure that initial direction is updated only for the first location update
+        if (locations.count==1){
+            initialDirection = latestLocation.course
+            print(initialDirection)
+        }
         incrementNumLaps(location: latestLocation)
     }
     
@@ -118,9 +124,8 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
       //  initialDirection = (locManager.location?.course)! //doubtful; think about better way
  */
         //set the current number of laps
-
         lapsButtonLabel.setText("\(numLaps)")
-
+        
     }
 
     override func didDeactivate() {
