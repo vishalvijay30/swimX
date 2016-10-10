@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B1740661DAADF6400196913 /* strokeTesterInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1740651DAADF6400196913 /* strokeTesterInterfaceController.swift */; };
 		2B5DACC31DA89F9400B42C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DACC21DA89F9400B42C6A /* AppDelegate.swift */; };
 		2B5DACC51DA89F9400B42C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DACC41DA89F9400B42C6A /* ViewController.swift */; };
 		2B5DACC81DA89F9400B42C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DACC61DA89F9400B42C6A /* Main.storyboard */; };
@@ -82,7 +81,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B1740651DAADF6400196913 /* strokeTesterInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strokeTesterInterfaceController.swift; sourceTree = "<group>"; };
 		2B5DACBF1DA89F9400B42C6A /* SwimX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5DACC21DA89F9400B42C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B5DACC41DA89F9400B42C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				2BDB48EE1DA98A73000A230C /* StatsOneController.swift */,
 				2BDB48F01DA98A84000A230C /* StatsTwoController.swift */,
 				2BDB48F21DA98A96000A230C /* StatsThreeController.swift */,
-				2B1740651DAADF6400196913 /* strokeTesterInterfaceController.swift */,
 				C9291E2C1DAB055D00B2E36A /* RunningBuffer.swift */,
 				C9291E2E1DAB1BAF00B2E36A /* MotionManager.swift */,
 				C9291E301DAB1FB400B2E36A /* WorkoutManager.swift */,
@@ -395,7 +392,6 @@
 				2BDB48F31DA98A96000A230C /* StatsThreeController.swift in Sources */,
 				2B5DACE81DA89F9500B42C6A /* ExtensionDelegate.swift in Sources */,
 				2B5DACE61DA89F9500B42C6A /* InterfaceController.swift in Sources */,
-				2B1740661DAADF6400196913 /* strokeTesterInterfaceController.swift in Sources */,
 				2BDB48ED1DA98A5B000A230C /* DiveStatsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
