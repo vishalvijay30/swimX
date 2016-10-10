@@ -192,6 +192,7 @@
                         <outlet property="distanceLabel" destination="dz7-zw-JXc" id="JQm-gs-Mqd"/>
                         <outlet property="heartLabel" destination="kqM-19-jVm" id="SGg-Ed-S2J"/>
                         <outlet property="speedLabel" destination="RC5-H9-Su7" id="ioO-xu-VYm"/>
+                        <outlet property="timeLabel" destination="upn-01-NEB" id="tR7-XO-Byl"/>
                     </connections>
                 </controller>
             </objects>
