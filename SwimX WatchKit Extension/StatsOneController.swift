@@ -219,8 +219,9 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         
         timeElapsed = Int(-1*(startTime.timeIntervalSinceNow))
         calories = 3.32*weight_value*(Double(timeElapsed)/(60*60))
-        calLabel.setText(String(calories)+" cals")
+        calLabel.setText(String(calories.roundTo(places: 1))+" cals")
         print(calories)
+        print(calories.roundTo(places: 1))
         
     }
     
@@ -400,4 +401,12 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     }
     
 
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundTo(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
 }
