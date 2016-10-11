@@ -19,15 +19,17 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     var currentSpeed: Double = 0.0
     var currentDistance: Double = 0.0
     var weight_value: Double = 0.0
+    var calories: Double = 0.0
+    var timeElapsed: Int = 0 // number of seconds since the start of session
+    var startTime: Date! // date object for start time of session
     @IBOutlet var timeLabel: WKInterfaceTimer!
-
+    @IBOutlet var calLabel: WKInterfaceLabel!
     
     @IBOutlet var distanceLabel: WKInterfaceLabel!
     @IBOutlet var speedLabel: WKInterfaceLabel!
     var locPrevious:CLLocation? = nil
     
     @IBOutlet var heartLabel: WKInterfaceLabel!
-    @IBOutlet var calsBurned: WKInterfaceLabel!
     
     
     let healthStore = HKHealthStore()
@@ -45,6 +47,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        startTime = Date()
         
         timeLabel.setDate(Date()) //Set Display Timer date to current time (invoked once)
         
@@ -211,6 +214,13 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         startWorkout()
         
         print(CLLocationManager.authorizationStatus())
+        
+        // calories burned calculation
+        
+        timeElapsed = Int(-1*(startTime.timeIntervalSinceNow))
+        calories = 3.32*weight_value*(Double(timeElapsed)/(60*60))
+        calLabel.setText(String(calories)+" cals")
+        print(calories)
         
     }
     
