@@ -399,7 +399,6 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         // Execute the Query
         self.healthStore.execute(sampleQuery)
     }
-    
 
 }
 

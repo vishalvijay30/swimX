@@ -130,7 +130,7 @@ class StatsThreeController: WKInterfaceController, CLLocationManagerDelegate {
       //  initialDirection = (locManager.location?.course)! //doubtful; think about better way
  */
         //set the current number of laps
-        lapsButtonLabel.setText("\(numLaps)")
+   //     lapsButtonLabel.setText("\(numLaps)")
         
     }
 
