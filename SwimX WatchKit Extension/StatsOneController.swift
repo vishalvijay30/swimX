@@ -137,14 +137,14 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     
     func updateSpeed(location:CLLocation) -> Void {
         currentSpeed = location.speed
-        speedLabel.setText("\(currentSpeed) m/s")
+        speedLabel.setText("\(round(100 * currentSpeed)/100) m/s")
         
     }
     
     func updateDistance(location:CLLocation) -> Void {
         if locPrevious != nil {
             currentDistance += location.distance(from: locPrevious!)
-            distanceLabel.setText("\(currentDistance) m")
+            distanceLabel.setText("\(round(100 * currentDistance)/100) m")
             locPrevious = location
         } else {
             locPrevious = location
@@ -153,11 +153,11 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
     
     func getCurrentSpeed() -> Double {
         //round to 2 decimal places
-        return round(100 * currentSpeed) / 100
+        return currentSpeed
     }
     
     func getCurrentDistance() -> Double {
-        return round(100 * currentDistance) / 100
+        return currentDistance
     }
     
     override func willActivate() {
@@ -190,8 +190,8 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         //locManager.requestWhenInUseAuthorization()
         
 
-        speedLabel.setText("\(currentSpeed)")
-        distanceLabel.setText("\(currentDistance)")
+        speedLabel.setText("\(round(100 * currentSpeed)/100) m/s")
+        distanceLabel.setText("\(round(100 * currentDistance)/100) m")
         guard HKHealthStore.isHealthDataAvailable() == true else {
             print("not available")
             return

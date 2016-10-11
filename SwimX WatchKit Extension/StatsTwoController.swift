@@ -135,7 +135,7 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
     }
     
     func updateStrokeCount() -> Void {
-        if active {
+        if (active) {
             totalNumStrokes += 1
             self.updateLabels()
         }
@@ -153,6 +153,7 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
     
     func getStrokeRate() -> Double {
         let s1c = StatsOneController()
+        //current dummy variable; more accurate variable would be total time from timer (please pass as context)
         let time = s1c.getCurrentSpeed() / s1c.getCurrentDistance()
         return (Double(totalNumStrokes)) / (Double(time))
     }
