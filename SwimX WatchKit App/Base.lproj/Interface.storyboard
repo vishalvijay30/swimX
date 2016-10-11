@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
@@ -188,7 +188,7 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="calsBurned" destination="weq-c4-u2C" id="sEd-rd-fJ0"/>
+                        <outlet property="calLabel" destination="weq-c4-u2C" id="MtD-tT-xjJ"/>
                         <outlet property="distanceLabel" destination="dz7-zw-JXc" id="JQm-gs-Mqd"/>
                         <outlet property="heartLabel" destination="kqM-19-jVm" id="SGg-Ed-S2J"/>
                         <outlet property="speedLabel" destination="RC5-H9-Su7" id="ioO-xu-VYm"/>
