@@ -47,6 +47,13 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        // showing implementation to retreive pool length
+        
+        let num = UserDefaults.standard.double(forKey: "swimLength")
+        print(String(num)+" is the current pool length.")
+        
+        
         startTime = Date()
         
         timeLabel.setDate(Date()) //Set Display Timer date to current time (invoked once)
