@@ -37,7 +37,7 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
         super.awake(withContext: context)
         
         // setting up the current pool length
-        length = UserDefaults.standard.double(forKey: "swimLength")
+        length = UserDefaults.standard.double(forKey: "swimLength") * 0.9144
         
         workoutManager.delegate = self
         workoutManager.startWorkout() //need to stop workout somewhere
