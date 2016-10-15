@@ -55,6 +55,7 @@ class StatsOneController: WKInterfaceController, HKWorkoutSessionDelegate, CLLoc
         
         
         startTime = Date()
+        UserDefaults.standard.set(startTime, forKey: "startTime")
         
         timeLabel.setDate(Date()) //Set Display Timer date to current time (invoked once)
         
