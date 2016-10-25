@@ -43,7 +43,11 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
         } else {
             flipTurnTimeButton.setText("0.0")
         }
-        scPerLapLabel.setText("\(getStrokesPerLap())")
+        if (getStrokesPerLap().isNaN) {
+            scPerLapLabel.setText("0.0")
+        } else {
+            scPerLapLabel.setText("\(getStrokesPerLap())")
+        }
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(checkAccelerationCondition), userInfo: nil, repeats: true) // TODO: invalidate it
         // Configure interface objects here.
     }
@@ -168,7 +172,11 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
     func updateLabels() -> Void {
         let statsThreeController = StatsThreeController()
         statsThreeController.getMetersPerStrokeLabel().setText("\(getMetersPerStroke())")
-        scPerLapLabel.setText("\(getStrokesPerLap())")
+        if (getStrokesPerLap().isNaN) {
+            scPerLapLabel.setText("0.0")
+        } else {
+            scPerLapLabel.setText("\(getStrokesPerLap())")
+        }
         strokeRateLabel.setText("\(getStrokeRate())")
     }
     
