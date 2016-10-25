@@ -46,7 +46,7 @@ class SwimTypeController: WKInterfaceController {
     }
     
     @IBAction func openSwim() {
-        
+        UserDefaults.standard.set(0, forKey: "swimLength") // setting 0 for open swim
         WKInterfaceController.reloadRootControllers(withNames: ["statsOne"], contexts: nil)
         
     }

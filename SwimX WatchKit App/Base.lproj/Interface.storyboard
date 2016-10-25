@@ -157,7 +157,7 @@
                     <items>
                         <timer width="136" height="35" alignment="left" id="upn-01-NEB"/>
                         <separator alignment="left" id="0I6-6D-1V8"/>
-                        <group width="1" height="42" alignment="left" layout="vertical" id="UwC-Tq-3Xw">
+                        <group width="1" height="43" alignment="left" layout="vertical" id="UwC-Tq-3Xw">
                             <items>
                                 <label width="1" height="20" alignment="left" text="-- m" textAlignment="center" id="dz7-zw-JXc"/>
                                 <label width="1" alignment="left" text="-- m/s" textAlignment="center" id="RC5-H9-Su7"/>

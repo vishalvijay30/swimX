@@ -30,11 +30,15 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
     var totalNumStrokes:Int = 0
     
     //dummy length variable for now; need to get length of pool from user
-    let length = 25.0
+    var length = 25.0
     
     override func awake(withContext context: Any?) {
         //print(motionManager.)
         super.awake(withContext: context)
+        
+        // setting up the current pool length
+        length = UserDefaults.standard.double(forKey: "swimLength") * 0.9144
+        
         workoutManager.delegate = self
         workoutManager.startWorkout() //need to stop workout somewhere
         //display the current flip turn time

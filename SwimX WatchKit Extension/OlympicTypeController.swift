@@ -25,11 +25,13 @@ class OlympicTypeController: WKInterfaceController {
     
     
     @IBAction func longType() {
-                WKInterfaceController.reloadRootControllers(withNames: ["statsOne", "statsTwo", "statsThree"], contexts: nil)
+        UserDefaults.standard.set(54.68, forKey: "swimLength")
+        WKInterfaceController.reloadRootControllers(withNames: ["statsOne", "statsTwo", "statsThree"], contexts: nil)
     }
     
     @IBAction func shortType() {
-                WKInterfaceController.reloadRootControllers(withNames: ["statsOne", "statsTwo", "statsThree"], contexts: nil)
+        UserDefaults.standard.set(27.34, forKey: "swimLength")
+        WKInterfaceController.reloadRootControllers(withNames: ["statsOne", "statsTwo", "statsThree"], contexts: nil)
     }
     
 

@@ -18,7 +18,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         locationManager.delegate = self
-        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+       // locationManager.requestAlwaysAuthorization()
     }
 
     override func didReceiveMemoryWarning() {
