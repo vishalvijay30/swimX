@@ -36,7 +36,7 @@
 		C9291E2D1DAB055D00B2E36A /* RunningBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9291E2C1DAB055D00B2E36A /* RunningBuffer.swift */; };
 		C9291E2F1DAB1BAF00B2E36A /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9291E2E1DAB1BAF00B2E36A /* MotionManager.swift */; };
 		C9291E311DAB1FB400B2E36A /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9291E301DAB1FB400B2E36A /* WorkoutManager.swift */; };
-		C9AEA61B1DCE8BDA00C56664 /* swimming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9AEA61A1DCE8BDA00C56664 /* swimming.jpg */; };
+		C95573851DCE9BB8003002CC /* swimming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C95573841DCE9BB8003002CC /* swimming.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +117,7 @@
 		C9291E2C1DAB055D00B2E36A /* RunningBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningBuffer.swift; sourceTree = "<group>"; };
 		C9291E2E1DAB1BAF00B2E36A /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		C9291E301DAB1FB400B2E36A /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
-		C9AEA61A1DCE8BDA00C56664 /* swimming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = swimming.jpg; path = ../swimming.jpg; sourceTree = "<group>"; };
+		C95573841DCE9BB8003002CC /* swimming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = swimming.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,6 @@
 		2B5DACB61DA89F9400B42C6A = {
 			isa = PBXGroup;
 			children = (
-				C9AEA61A1DCE8BDA00C56664 /* swimming.jpg */,
 				2B5DACC11DA89F9400B42C6A /* SwimX */,
 				2B5DACD51DA89F9400B42C6A /* SwimX WatchKit App */,
 				2B5DACE41DA89F9500B42C6A /* SwimX WatchKit Extension */,
@@ -169,6 +168,7 @@
 		2B5DACC11DA89F9400B42C6A /* SwimX */ = {
 			isa = PBXGroup;
 			children = (
+				C95573841DCE9BB8003002CC /* swimming.jpg */,
 				2BDB48E11DA974E5000A230C /* SwimX.entitlements */,
 				2B5DACC21DA89F9400B42C6A /* AppDelegate.swift */,
 				2B5DACC41DA89F9400B42C6A /* ViewController.swift */,
@@ -346,7 +346,7 @@
 			files = (
 				2B5DACCD1DA89F9400B42C6A /* LaunchScreen.storyboard in Resources */,
 				2B5DACCA1DA89F9400B42C6A /* Assets.xcassets in Resources */,
-				C9AEA61B1DCE8BDA00C56664 /* swimming.jpg in Resources */,
+				C95573851DCE9BB8003002CC /* swimming.jpg in Resources */,
 				2B5DACC81DA89F9400B42C6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
