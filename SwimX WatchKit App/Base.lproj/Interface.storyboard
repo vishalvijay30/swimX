@@ -117,10 +117,18 @@
                         <timer width="136" height="35" alignment="left" id="1xI-FR-c6I"/>
                         <separator alignment="left" id="0OT-cA-jZk"/>
                         <label width="136" height="44" alignment="left" text="Dive Depth: -- m" id="6hT-PW-b2n"/>
-                        <group width="1" height="42" alignment="left" id="zua-o9-dN3">
+                        <group width="1" height="42" alignment="left" id="deh-2O-P8B">
                             <items>
-                                <label width="62" height="20" alignment="left" text="-- cals" textAlignment="center" id="ORZ-IE-FQr"/>
-                                <label width="60" alignment="left" text="-- bpm" textAlignment="center" id="VEA-ku-ayQ"/>
+                                <label width="62" height="20" alignment="left" text="-- cals" textAlignment="center" id="t8o-Pw-YKG"/>
+                                <group width="0.5" alignment="left" id="1Qs-jP-Zvv">
+                                    <items>
+                                        <label alignment="right" text="BPM" id="f5W-RE-rjw">
+                                            <color key="textColor" red="0.86132884030000001" green="0.058584794400000001" blue="0.11313973369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <label width="34" alignment="left" text="---" textAlignment="right" id="k1f-yM-dyF"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
@@ -133,6 +141,11 @@
                             </menuItem>
                         </items>
                     </menu>
+                    <connections>
+                        <outlet property="calLabel" destination="t8o-Pw-YKG" id="lto-Ck-9Os"/>
+                        <outlet property="heartLabel" destination="k1f-yM-dyF" id="kab-i3-6KB"/>
+                        <outlet property="timeLabel" destination="1xI-FR-c6I" id="8HL-0J-yrm"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="225" y="881"/>
