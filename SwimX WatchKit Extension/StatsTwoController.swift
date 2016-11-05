@@ -13,7 +13,7 @@ import CoreMotion
 
 class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
     
-
+    
     @IBOutlet var strokeRateLabel: WKInterfaceLabel!
     @IBOutlet var scPerLapLabel: WKInterfaceLabel!
     @IBOutlet var flipTurnTimeButton: WKInterfaceLabel!
@@ -57,7 +57,7 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
     }
     
     func checkAccelerationCondition() {
-
+        
         if (fabs(statsOneController.getCurrentDistance().truncatingRemainder(dividingBy: length))<=5.0) {
             //starting updates on current queue for now; not recommended in the future
             motionManager.accelerometerUpdateInterval = 0.1
@@ -87,7 +87,7 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
                 //timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(StatsTwoController.updateTime), userInfo: nil, repeats: true)
                 self.updateTime()
                 
-            } else { 
+            } else {
                 motionManager.stopAccelerometerUpdates()
                 flipTurnTimeArr.append(flipTurnTime)
                 flipTurnTimeButton.setText("\(flipTurnTimeArr[flipTurnTimeArr.count-1])")
@@ -190,11 +190,11 @@ class StatsTwoController: WKInterfaceController, WorkoutManagerDelegate {
         super.willActivate()
         active = true
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
         active = false
     }
-
+    
 }

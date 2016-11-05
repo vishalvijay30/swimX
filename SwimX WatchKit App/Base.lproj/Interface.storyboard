@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
@@ -30,7 +30,7 @@
             <objects>
                 <controller title="Dive Confirm" id="iZR-KU-6cH" customClass="DiveConfirmController" customModule="SwimX_WatchKit_Extension">
                     <items>
-                        <label width="136" height="106" alignment="left" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " numberOfLines="5" id="5zj-Ul-UUG"/>
+                        <label width="136" height="106" alignment="left" text="Great! Click confirm when you're at the pool level" numberOfLines="5" id="5zj-Ul-UUG"/>
                         <button width="1" alignment="left" title="Confirm" id="2sj-Pc-r9i">
                             <connections>
                                 <action selector="confirm" destination="iZR-KU-6cH" id="M6U-jc-QB0"/>
@@ -70,7 +70,7 @@
                         </button>
                         <button width="1" alignment="left" title="Stat-2" id="n2Q-ky-Qvc">
                             <connections>
-                                <segue destination="AIR-dD-D4O" kind="push" id="dsv-Ap-Cz2"/>
+                                <segue destination="P1U-ZD-dzn" kind="push" id="NNf-kx-N6C"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Stat-3" id="pwC-Rh-iT1">
@@ -85,19 +85,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="-819" y="50"/>
-        </scene>
-        <!--Stroke Tester Interface Controller-->
-        <scene sceneID="1iO-wW-t98">
-            <objects>
-                <controller id="vZ3-Hz-GeA" customClass="strokeTesterInterfaceController" customModule="SwimX_WatchKit_Extension">
-                    <items>
-                        <label width="136" height="47" alignment="left" text="meters / stroke" textAlignment="center" id="en9-jl-IhJ"/>
-                        <label width="136" height="47" alignment="left" text="Stroke Rate" textAlignment="center" id="B0t-gh-8B4"/>
-                        <label width="136" height="49" alignment="left" text="sc/lap" textAlignment="center" id="sLy-cc-hts"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-313" y="44"/>
         </scene>
         <!--CustomPoolSize-->
         <scene sceneID="9um-V7-U3T">
@@ -120,7 +107,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-506" y="490"/>
+            <point key="canvasLocation" x="-508" y="490"/>
         </scene>
         <!--Dive Stats-->
         <scene sceneID="Vpe-2z-4MB">
@@ -196,25 +183,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-1273" y="881"/>
-        </scene>
-        <!--Swim Stats - 2-->
-        <scene sceneID="5Rc-pD-rPV">
-            <objects>
-                <controller identifier="statsTwo" title="Swim Stats - 2" id="AIR-dD-D4O" customClass="StatsTwoController" customModule="SwimX_WatchKit_Extension">
-                    <items>
-                        <label width="136" height="42" alignment="left" text="sc/lap" textAlignment="center" id="dK8-4I-Do8"/>
-                        <label width="136" height="38" alignment="left" text="flip turn" textAlignment="center" id="hgp-PD-d50"/>
-                        <label width="136" height="35" alignment="left" text="Stroke Rate" textAlignment="center" id="sH3-Qs-9hh"/>
-                    </items>
-                    <connections>
-                        <outlet property="flipTurnTimeButton" destination="hgp-PD-d50" id="Rhs-FW-H3z"/>
-                        <outlet property="scPerLapLabel" destination="dK8-4I-Do8" id="e1C-TV-BIz"/>
-                        <outlet property="strokeRateLabel" destination="sH3-Qs-9hh" id="coX-v5-TUC"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-1024" y="881"/>
+            <point key="canvasLocation" x="-1136" y="881"/>
         </scene>
         <!--Swim Stats - 3-->
         <scene sceneID="hXZ-R1-TcA">
@@ -230,14 +199,14 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-777" y="881"/>
+            <point key="canvasLocation" x="-508" y="881"/>
         </scene>
         <!--OlympicSwimType-->
         <scene sceneID="uSW-iH-tvV">
             <objects>
                 <controller identifier="OlympicSwimType" id="wpI-fm-2WB" customClass="OlympicTypeController" customModule="SwimX_WatchKit_Extension">
                     <items>
-                        <label width="136" height="381" alignment="left" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " numberOfLines="5" id="KcS-fg-LK6"/>
+                        <label width="136" height="381" alignment="left" text="Use Force Touch to select the swim type just before you start swimming" numberOfLines="5" id="KcS-fg-LK6"/>
                     </items>
                     <menu key="menu" id="obS-xM-pdV">
                         <items>
@@ -255,7 +224,25 @@
                     </menu>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-1136" y="490"/>
+            <point key="canvasLocation" x="-1172" y="490"/>
+        </scene>
+        <!--Swim Stats - 2-->
+        <scene sceneID="BE9-Ep-fhR">
+            <objects>
+                <controller identifier="statsTwo" title="Swim Stats - 2" id="P1U-ZD-dzn" customClass="StatsTwoController" customModule="SwimX_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="42" alignment="left" text="sc/lap" textAlignment="center" id="Hz7-qG-pV8"/>
+                        <label width="136" height="38" alignment="left" text="flip turn" textAlignment="center" id="k7t-QV-xaG"/>
+                        <label width="136" height="35" alignment="left" text="Stroke Rate" textAlignment="center" id="Qgj-Dg-NYA"/>
+                    </items>
+                    <connections>
+                        <outlet property="flipTurnTimeButton" destination="k7t-QV-xaG" id="DJn-V4-noB"/>
+                        <outlet property="scPerLapLabel" destination="Hz7-qG-pV8" id="ptW-4f-GSe"/>
+                        <outlet property="strokeRateLabel" destination="Qgj-Dg-NYA" id="ngf-nm-hiY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-819" y="881"/>
         </scene>
     </scenes>
 </document>

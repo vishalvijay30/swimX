@@ -8,12 +8,37 @@
 
 import WatchKit
 import CoreLocation
+import WatchConnectivity
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+
+class ExtensionDelegate: NSObject, WCSessionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
+            print("activating")
+        }
+        
     }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if activationState == WCSessionActivationState.activated {
+            NSLog("Activated")
+        }
+        
+        if activationState == WCSessionActivationState.inactive {
+            NSLog("Inactive")
+        }
+        
+        if activationState == WCSessionActivationState.notActivated {
+            NSLog("NotActivated")
+        }
+    }
+    
 
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
