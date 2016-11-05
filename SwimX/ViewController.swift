@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-
+    @IBOutlet weak var backgroundImage: UIImageView!
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -20,6 +20,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
        // locationManager.requestAlwaysAuthorization()
+        backgroundImage.image = #imageLiteral(resourceName: "swimming.jpg")
+        backgroundImage.sizeToFit()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
