@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
@@ -70,7 +70,7 @@
                         </button>
                         <button width="1" alignment="left" title="Stat-2" id="n2Q-ky-Qvc">
                             <connections>
-                                <segue destination="AIR-dD-D4O" kind="push" id="dsv-Ap-Cz2"/>
+                                <segue destination="P1U-ZD-dzn" kind="push" id="NNf-kx-N6C"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Stat-3" id="pwC-Rh-iT1">
@@ -198,24 +198,6 @@
             </objects>
             <point key="canvasLocation" x="-1273" y="881"/>
         </scene>
-        <!--Swim Stats - 2-->
-        <scene sceneID="5Rc-pD-rPV">
-            <objects>
-                <controller identifier="statsTwo" title="Swim Stats - 2" id="AIR-dD-D4O" customClass="StatsTwoController" customModule="SwimX_WatchKit_Extension">
-                    <items>
-                        <label width="136" height="42" alignment="left" text="sc/lap" textAlignment="center" id="dK8-4I-Do8"/>
-                        <label width="136" height="38" alignment="left" text="flip turn" textAlignment="center" id="hgp-PD-d50"/>
-                        <label width="136" height="35" alignment="left" text="Stroke Rate" textAlignment="center" id="sH3-Qs-9hh"/>
-                    </items>
-                    <connections>
-                        <outlet property="flipTurnTimeButton" destination="hgp-PD-d50" id="Rhs-FW-H3z"/>
-                        <outlet property="scPerLapLabel" destination="dK8-4I-Do8" id="e1C-TV-BIz"/>
-                        <outlet property="strokeRateLabel" destination="sH3-Qs-9hh" id="coX-v5-TUC"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-1024" y="881"/>
-        </scene>
         <!--Swim Stats - 3-->
         <scene sceneID="hXZ-R1-TcA">
             <objects>
@@ -256,6 +238,24 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="-1136" y="490"/>
+        </scene>
+        <!--Swim Stats - 2-->
+        <scene sceneID="BE9-Ep-fhR">
+            <objects>
+                <controller identifier="statsTwo" title="Swim Stats - 2" id="P1U-ZD-dzn" customClass="StatsTwoController" customModule="SwimX_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="42" alignment="left" text="sc/lap" textAlignment="center" id="Hz7-qG-pV8"/>
+                        <label width="136" height="38" alignment="left" text="flip turn" textAlignment="center" id="k7t-QV-xaG"/>
+                        <label width="136" height="35" alignment="left" text="Stroke Rate" textAlignment="center" id="Qgj-Dg-NYA"/>
+                    </items>
+                    <connections>
+                        <outlet property="flipTurnTimeButton" destination="k7t-QV-xaG" id="DJn-V4-noB"/>
+                        <outlet property="scPerLapLabel" destination="Hz7-qG-pV8" id="ptW-4f-GSe"/>
+                        <outlet property="strokeRateLabel" destination="Qgj-Dg-NYA" id="ngf-nm-hiY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="881"/>
         </scene>
     </scenes>
 </document>
