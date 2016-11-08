@@ -6,6 +6,14 @@
 //  Copyright © 2016 Anushk Mittal. All rights reserved.
 //
 
+
+// calories burned
+// 204 calories per hour - 150 lbs
+// 150 lbs - 204 calories in an hour
+// 1 lbs - 204/150 calories in an hour
+// in 1 hours 204/150 calories
+// in 1 minute 204 / 150 / 60 calories per lb per minute
+
 import WatchKit
 import Foundation
 import HealthKit

@@ -116,7 +116,8 @@
                     <items>
                         <timer width="136" height="35" alignment="left" id="1xI-FR-c6I"/>
                         <separator alignment="left" id="0OT-cA-jZk"/>
-                        <label width="136" height="44" alignment="left" text="Dive Depth: -- m" id="6hT-PW-b2n"/>
+                        <label width="136" height="24" alignment="left" text="Dive Depth: -- m" id="6hT-PW-b2n"/>
+                        <label width="136" height="24" alignment="left" text="-- dives" textAlignment="center" id="8S9-7e-zWg"/>
                         <group width="1" height="42" alignment="left" id="deh-2O-P8B">
                             <items>
                                 <label width="62" height="20" alignment="left" text="-- cals" textAlignment="center" id="t8o-Pw-YKG"/>
@@ -148,7 +149,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="225" y="881"/>
+            <point key="canvasLocation" x="225" y="878"/>
         </scene>
         <!--Swim Stats - 1-->
         <scene sceneID="LwE-o6-39l">
